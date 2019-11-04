@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * @author Syen
@@ -49,6 +50,11 @@ public class TypeServiceImpl implements TypeService {
         }
         BeanUtils.copyProperties(type,t);
         return typeRepository.save(t);
+    }
+
+    @Override
+    public List<Type> ListType() {
+        return typeRepository.findAll();
     }
 
     @Override
