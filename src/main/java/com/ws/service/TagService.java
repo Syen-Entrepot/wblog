@@ -23,6 +23,8 @@ public interface TagService {
 
     List<Tag> ListTag();//返回所有数据
 
+    List<Tag> ListTag(String ids);
+
     Tag updateTag(Long id, Tag type);//修改分类
 
     void deleteTag(Long id);//删除分类

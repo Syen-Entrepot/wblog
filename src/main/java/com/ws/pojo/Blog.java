@@ -16,7 +16,11 @@ public class Blog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//表示自动生成主键
     private Long id;
     private String title;
-    private String content;
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
+    private String content;//string类型的数据长度为255，这里加了两个注解可以让它的数据类型由string变为longtext
+
     private String firstPicture;
     private String flag;
     private Integer views;
@@ -41,6 +45,9 @@ public class Blog {
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();
+
+    @Transient//这个注解可以不用把这个属性放进数据库
+    private String tagIds;
 
     public Blog() {
 
@@ -180,6 +187,14 @@ public class Blog {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
     }
 
     @Override

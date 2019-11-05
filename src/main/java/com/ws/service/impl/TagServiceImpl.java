@@ -4,6 +4,7 @@ import com.ws.dao.TagsRepository;
 import com.ws.exception.NotFoundException;
 import com.ws.pojo.Tag;
 import com.ws.service.TagService;
+import com.ws.util.StringToList;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,8 @@ public class TagServiceImpl implements TagService {
 
     @Autowired
     private TagsRepository tagsRepository;
+
+    StringToList stringToList = new StringToList();
 
     @Transactional//放进事务中
     @Override
@@ -60,6 +63,12 @@ public class TagServiceImpl implements TagService {
     @Override
     public Tag getTagByName(String name) {
         return tagsRepository.findByName(name);
+    }
+
+    @Override
+    public List<Tag> ListTag(String ids) {
+
+        return tagsRepository.findAllById(stringToList.convertToList(ids));
     }
 
     @Transactional

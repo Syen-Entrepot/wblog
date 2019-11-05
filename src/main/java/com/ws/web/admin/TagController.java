@@ -77,7 +77,7 @@ public class TagController {
         //查看是否有重复的type
         Tag tag1 = tagService.getTagByName(tag.getName());
         if(tag1 != null){
-            result.rejectValue("name","nameError","该分类已存在");
+            result.rejectValue("name","nameError","该标签已存在");
         }
         //绑定验证
         if(result.hasErrors()){
