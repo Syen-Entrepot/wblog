@@ -13,6 +13,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -67,6 +68,17 @@ public class BlogController {
         return INPUT;
     }
 
+    @GetMapping("/blogs/{id}/input")
+    public String editinput(@PathVariable Long id, Model model){
+        model.addAttribute("types",typeService.ListType());
+        model.addAttribute("tags",tagService.ListTag());
+        Blog blog = blogService.getBlog(id);
+        blog.init();
+        model.addAttribute("blog",blog);
+
+        return INPUT;
+    }
+
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession httpSession){
         blog.setUser( (User) httpSession.getAttribute("user"));
@@ -82,6 +94,14 @@ public class BlogController {
            attributes.addFlashAttribute("message","操作成功");
        }
        return REDIRECT_LIST;
+    }
+
+    @GetMapping("/blogs/{id}/delete")
+    public String delete(@PathVariable Long id,RedirectAttributes attributes){
+        blogService.deleteBlog(id);
+        attributes.addFlashAttribute("message","删除成功");
+        return REDIRECT_LIST;
+
     }
 
 }
