@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="_fragments :: head(~{::title})">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width= device-width,inital-scale=1.0">
     <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
 </head>
 <body>
 
 <!--导航-->
+<!---->
 <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="active m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i> 首页</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i> 分类</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i> 标签</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i> 归档</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于博主</a>
+
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="搜索.....">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
 </nav>
 
 <!--中间内容-->
@@ -31,7 +59,7 @@
                 <!--content-->
                 <div class="ui attached  segment ">
                     <div class="ui padded vertical segment m-padded-tb-large">
-                    <div class="ui mobile reversed stackable grid">
+                    <div class="ui middle aligned mobile reversed stackable grid">
                         <div class="ui eleven wide column">
                             <h3 class="ui header">你了解互联网这个行业吗？</h3>
                             <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
@@ -397,7 +425,8 @@
 <br>
 <br>
 <!--底部footer-->
-<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+<!---->
+<footer th:replace="_fragments :: footer"  class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="three wide column">

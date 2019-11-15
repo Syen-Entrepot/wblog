@@ -86,9 +86,13 @@ public class BlogController {
         blog.setType(typeService.getType(blog.getType().getId()));
 
         blog.setTags(tagService.ListTag(blog.getTagIds()));
-
-       Blog blog1 = blogService.saveBlog(blog);
-       if( blog1 == null){
+        Blog b;
+       if(blog.getId() == null){
+           b = blogService.saveBlog(blog);
+       }else {
+           b = blogService.updateBlog(blog.getId(),blog);
+       }
+       if( b == null){
            attributes.addFlashAttribute("message","操作失败");
        }else {
            attributes.addFlashAttribute("message","操作成功");

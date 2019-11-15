@@ -44,8 +44,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="active teal item">发布</a>
-            <a href="#" class="item">列表</a>
+            <a href="#" th:href="@{/admin/blogs/input}" class="active teal item">发布</a>
+            <a href="#" th:href="@{/admin/blogs}" class="item">列表</a>
         </div>
     </div>
 </div>
@@ -113,6 +113,11 @@
                       <input type="text" name="firstPicture" th:value="*{firstPicture}" placeholder="首图引用地址">
                   </div>
              </div>
+
+             <div class="required field">
+                 <textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
+             </div>
+
 <!--推荐--转载声明--赞赏--评论----->
              <div class="inline fields">
                   <div class="field">
@@ -268,7 +273,14 @@
                identifier:'firstPicture',
                rules:[{
                    type:'empty',
-                   prompt:'请请输入博客首图地址'
+                   prompt:'请输入博客首图地址'
+               }]
+           },
+           description:{
+               identifier:'description',
+               rules:[{
+                   type:'empty',
+                   prompt:'请输入本篇博客描述'
                }]
            }
        }

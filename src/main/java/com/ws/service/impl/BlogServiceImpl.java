@@ -5,6 +5,7 @@ import com.ws.exception.NotFoundException;
 import com.ws.pojo.Blog;
 import com.ws.pojo.Type;
 import com.ws.service.BlogService;
+import com.ws.util.MyBeanUtils;
 import com.ws.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,8 +72,12 @@ public class BlogServiceImpl implements BlogService {
         }else {
             blog.setUpdateTime(new Date());
         }
-
         return blogRepository.save(blog);
+    }
+
+    @Override
+    public Page<Blog> listBlog(Pageable pageable) {
+        return blogRepository.findAll(pageable);
     }
 
     @Transactional
@@ -82,7 +87,8 @@ public class BlogServiceImpl implements BlogService {
         if(b == null){
             throw  new NotFoundException("该博客不存在");
         }
-        BeanUtils.copyProperties(b,blog);
+        BeanUtils.copyProperties(blog,b,MyBeanUtils.getNullPropertyNames(blog));
+        b.setUpdateTime(new Date());
         return blogRepository.save(b);
     }
 

@@ -23,6 +23,8 @@ public interface TypeService {
 
     List<Type> ListType();//返回所有数据
 
+    List<Type> listTypeTop(Integer size);
+
     Type updateType(Long id,Type type);//修改分类
 
     void deleteType(Long id);//删除分类
