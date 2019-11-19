@@ -15,6 +15,8 @@ public interface BlogService {
 
     Blog getBlog(Long id);
 
+    Blog getAndConvert(Long id);//用于获取blog并做markdown与html的转换
+
     Page<Blog> listBlog(Pageable pageable,BlogQuery blogQuery);
 
     Page<Blog> listBlog(Pageable pageable);

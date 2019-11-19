@@ -5,6 +5,7 @@ import com.ws.exception.NotFoundException;
 import com.ws.pojo.Blog;
 import com.ws.pojo.Type;
 import com.ws.service.BlogService;
+import com.ws.util.MarkdownUtils;
 import com.ws.util.MyBeanUtils;
 import com.ws.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -75,6 +76,19 @@ public class BlogServiceImpl implements BlogService {
             blog.setUpdateTime(new Date());
         }
         return blogRepository.save(blog);
+    }
+
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findById(id).orElse(null);
+        if(blog == null){
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();//因为hibernate的数据修改后会回传到数据库，所以保证数据库的content是markdown语法的content
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
     }
 
     @Override
