@@ -28,10 +28,13 @@
             <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于博主</a>
 
             <div class="right m-item item m-mobile-hide">
-                <div class="ui icon inverted transparent input">
-                    <input type="text" placeholder="搜索.....">
-                    <i class="search link icon"></i>
-                </div>
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" name="query" placeholder="搜索....." th:value="${query}"><!--div用text,这里用value -->
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
