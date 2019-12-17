@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head >
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width= device-width,inital-scale=1.0">
     <title>标签</title>
@@ -10,7 +10,7 @@
 <body>
 
 <!--导航-->
-<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+<nav th:replace="_fragments :: menu(3)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">Blog</h2>
@@ -43,318 +43,60 @@
                      <h3 class="ui teal header">标签</h3>
                  </div>
                  <div class="right aligned column">
-                     共<h2 class="ui orange header m-inline-block m-text-thin">14</h2>个
+                     共<h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(tags)}">14</h2>个
                  </div>
              </div>
          </div>
          <!--标签-->
          <div class="ui attached segment m-padded-tb-large">
-             <a href="#" class="ui label teal basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">23</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
-             </a>
-             <a href="#" class="ui label basic left pointing large label m-margin-tb-tiny">
-                 学习方法论
-                 <div class="detail">19</div>
+             <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui label basic left pointing large label m-margin-tb-tiny" th:classappend="${tag.id==activeTagId} ? 'teal'" th:each="tag : ${tags}">
+                 <span th:text="${tag.name}">学习方法论</span>
+                 <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
              </a>
 
          </div>
          <!--博客列表-->
          <div class="ui top attached teal segment">
-             <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" >
-                 <div class="ui mobile reversed stackable grid">
+             <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
+                 <div class="ui middle aligned mobile reversed stackable grid">
                      <div class="ui eleven wide column">
-                         <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                         <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
+                         <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你了解互联网这个行业吗？</a></h3>
+                         <p class="m-text" th:text="|${blog.description}......|">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
                              分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
                              不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
                          </p>
-                         <div class="ui stackable grid">
+                         <div class="ui grid">
                              <div class="row">
                                  <div class="eleven wide column">
                                      <div class="ui mini horizontal link list">
                                          <div class="item">
-                                             <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                             <div class="content"><a href="#" class="header">Syen</a></div>
+                                             <img src="https://unsplash.it/100/100?image=1006" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                                             <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">Syen</a></div>
                                          </div>
                                          <div class="item">
-                                             <i class="calendar icon"></i> 2019-08-15
+                                             <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-mm-dd')}">2019-08-15</span>
                                          </div>
                                          <div class="item">
-                                             <i class="eye icon"></i> 1314
+                                             <i class="eye icon"></i><span th:text="${blog.views}">1314</span>
                                          </div>
                                      </div>
                                  </div>
                                  <div class="right aligned five wide column">
-                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">认知升级</a>
                                  </div>
                              </div>
+
                              <div class="row">
                                  <div class="column">
-
-                                     <a href="#" class="ui basic teal left pointing label m-padded-mini thin">方法论</a>
+                                     <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic teal left pointing label m-padded-mini thin" th:each="tag : ${blog.tags}" th:text="${tag.name}">方法论</a>
                                  </div>
                              </div>
-
 
                          </div>
                      </div>
                      <div class="five wide column">
-                         <a href="#" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" >
-                 <div class="ui mobile reversed stackable grid">
-                     <div class="ui eleven wide column">
-                         <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                         <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                             分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                             不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                         </p>
-                         <div class="ui stackable grid">
-                             <div class="row">
-                                 <div class="eleven wide column">
-                                     <div class="ui mini horizontal link list">
-                                         <div class="item">
-                                             <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                             <div class="content"><a href="#" class="header">Syen</a></div>
-                                         </div>
-                                         <div class="item">
-                                             <i class="calendar icon"></i> 2019-08-15
-                                         </div>
-                                         <div class="item">
-                                             <i class="eye icon"></i> 1314
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="right aligned five wide column">
-                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="column">
-
-                                     <a href="#" class="ui basic teal left pointing label m-padded-mini thin">方法论</a>
-                                 </div>
-                             </div>
-
-
-                         </div>
-                     </div>
-                     <div class="five wide column">
-                         <a href="#" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" >
-                 <div class="ui mobile reversed stackable grid">
-                     <div class="ui eleven wide column">
-                         <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                         <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                             分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                             不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                         </p>
-                         <div class="ui stackable grid">
-                             <div class="row">
-                                 <div class="eleven wide column">
-                                     <div class="ui mini horizontal link list">
-                                         <div class="item">
-                                             <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                             <div class="content"><a href="#" class="header">Syen</a></div>
-                                         </div>
-                                         <div class="item">
-                                             <i class="calendar icon"></i> 2019-08-15
-                                         </div>
-                                         <div class="item">
-                                             <i class="eye icon"></i> 1314
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="right aligned five wide column">
-                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="column">
-
-                                     <a href="#" class="ui basic teal left pointing label m-padded-mini thin">方法论</a>
-                                 </div>
-                             </div>
-
-
-                         </div>
-                     </div>
-                     <div class="five wide column">
-                         <a href="#" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" >
-                 <div class="ui mobile reversed stackable grid">
-                     <div class="ui eleven wide column">
-                         <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                         <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                             分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                             不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                         </p>
-                         <div class="ui stackable grid">
-                             <div class="row">
-                                 <div class="eleven wide column">
-                                     <div class="ui mini horizontal link list">
-                                         <div class="item">
-                                             <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                             <div class="content"><a href="#" class="header">Syen</a></div>
-                                         </div>
-                                         <div class="item">
-                                             <i class="calendar icon"></i> 2019-08-15
-                                         </div>
-                                         <div class="item">
-                                             <i class="eye icon"></i> 1314
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="right aligned five wide column">
-                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="column">
-
-                                     <a href="#" class="ui basic teal left pointing label m-padded-mini thin">方法论</a>
-                                 </div>
-                             </div>
-
-
-                         </div>
-                     </div>
-                     <div class="five wide column">
-                         <a href="#" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" >
-                 <div class="ui mobile reversed stackable grid">
-                     <div class="ui eleven wide column">
-                         <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                         <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                             分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                             不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                         </p>
-                         <div class="ui stackable grid">
-                             <div class="row">
-                                 <div class="eleven wide column">
-                                     <div class="ui mini horizontal link list">
-                                         <div class="item">
-                                             <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                             <div class="content"><a href="#" class="header">Syen</a></div>
-                                         </div>
-                                         <div class="item">
-                                             <i class="calendar icon"></i> 2019-08-15
-                                         </div>
-                                         <div class="item">
-                                             <i class="eye icon"></i> 1314
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="right aligned five wide column">
-                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="column">
-
-                                     <a href="#" class="ui basic teal left pointing label m-padded-mini thin">方法论</a>
-                                 </div>
-                             </div>
-
-
-                         </div>
-                     </div>
-                     <div class="five wide column">
-                         <a href="#" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                         </a>
-                     </div>
-                 </div>
-             </div>
-             <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" >
-                 <div class="ui mobile reversed stackable grid">
-                     <div class="ui eleven wide column">
-                         <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                         <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                             分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                             不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                         </p>
-                         <div class="ui stackable grid">
-                             <div class="row">
-                                 <div class="eleven wide column">
-                                     <div class="ui mini horizontal link list">
-                                         <div class="item">
-                                             <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                             <div class="content"><a href="#" class="header">Syen</a></div>
-                                         </div>
-                                         <div class="item">
-                                             <i class="calendar icon"></i> 2019-08-15
-                                         </div>
-                                         <div class="item">
-                                             <i class="eye icon"></i> 1314
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="right aligned five wide column">
-                                     <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="column">
-
-                                     <a href="#" class="ui basic teal left pointing label m-padded-mini thin">方法论</a>
-                                 </div>
-                             </div>
-
-
-                         </div>
-                     </div>
-                     <div class="five wide column">
-                         <a href="#" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
+                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                             <img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
                          </a>
                      </div>
                  </div>
@@ -362,14 +104,13 @@
          </div>
 
          <!--分页footer-->
-         <div class="ui bottom attached segment">
+         <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
              <div class="ui middle aligned two column grid">
                  <div class="column">
-                     <a href="#" class="ui mini teal basic button">上一页</a>
+                     <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
                  </div>
                  <div class="right aligned column">
-                     <a href="#" class="ui mini teal basic button">下一页</a>
-
+                     <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
                  </div>
              </div>
          </div>
@@ -380,7 +121,7 @@
 <br>
 <br>
 <!--底部footer-->
-<footer class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
 <div class="ui center aligned container">
     <div class="ui inverted divided stackable grid">
         <div class="three wide column">
@@ -416,9 +157,10 @@
 </div>
 </footer>
 
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <script src="../static/js/jquery-3.4.1.js" th:src="@{/js/jquery-3.4.1.js}"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-
+<!--/*/</th:block>/*/-->
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');

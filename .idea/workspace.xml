@@ -6,46 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a6cec9c-a782-4773-b556-c3743bc6c29e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ws/dao/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ws/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ws/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ws/web/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ws/web/TypeShowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/waypoints/jquery.waypoints.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/waypoints/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ws/service/impl/CommentServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ws/web/TagShowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/wblog-dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-10-28.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-10-29.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-10-30.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-10-31.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-03.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-04.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-05.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-06.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-08.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-14.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/wblog-dev.log.2019-11-15.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/tags-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/tags-input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/tags.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/type.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/type.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/_fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/tags-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/tags-input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/type.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/type.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,20 +45,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="type.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/type.html">
+      <file leaf-file-name="tags.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tags.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+            <state relative-caret-position="255">
+              <caret line="90" column="82" selection-start-line="90" selection-start-column="82" selection-end-line="90" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeShowController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/web/TypeShowController.java">
+      <file leaf-file-name="TagShowController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/web/TagShowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="321">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="type.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/type.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="981">
+              <caret line="102" column="19" lean-forward="true" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ws/web/admin/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/util/MD5Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/interceptor/LoginInterceptor.java" />
@@ -140,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/web/admin/BlogController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/util/MyBeanUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/tags.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/service/TypeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/dao/TypeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/service/impl/TypeServiceImpl.java" />
@@ -149,8 +140,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ws/service/impl/TagServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/dao/BlogRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/util/MarkdownUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/web/indexController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/typo.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
@@ -168,7 +157,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/search.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ws/web/TypeShowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ws/web/TagShowController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/type.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/tags.html" />
       </list>
     </option>
   </component>
@@ -434,15 +427,6 @@
               <item name="wblog" type="b2602c69:ProjectViewProjectNode" />
               <item name="wblog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wblog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -501,14 +485,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.ws.service.impl" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ws.web" />
       <recent name="com.ws.web.admin" />
       <recent name="com.ws.service.impl" />
       <recent name="com.ws.service" />
       <recent name="com.ws.dao" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Idea工作空间\wblog\wblog\src\main\resources\static\images" />
@@ -699,7 +684,7 @@
       <workItem from="1576501881880" duration="1113000" />
       <workItem from="1576503161410" duration="178000" />
       <workItem from="1576503359643" duration="7570000" />
-      <workItem from="1576570031280" duration="6221000" />
+      <workItem from="1576570031280" duration="10198000" />
     </task>
     <servers />
   </component>
@@ -736,7 +721,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220147000" />
+    <option name="totallyTimeSpent" value="224124000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,7 +754,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.2339515" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2425107" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.017118402" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.32952926" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.22253923" />
       <window_info anchor="bottom" id="Problems" order="11" weight="0.15406562" />
@@ -824,9 +809,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -869,20 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/pojo/Blog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/types.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/pojo/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -908,20 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="89" column="70" selection-start-line="89" selection-start-column="70" selection-end-line="89" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -1029,13 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tags.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1168,10 +1115,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/service/BlogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/pojo/Blog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/service/impl/BlogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/types.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/type.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        <state relative-caret-position="981">
+          <caret line="102" column="19" lean-forward="true" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ws/web/TagShowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tags.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="90" column="82" selection-start-line="90" selection-start-column="82" selection-end-line="90" selection-end-column="82" />
         </state>
       </provider>
     </entry>
