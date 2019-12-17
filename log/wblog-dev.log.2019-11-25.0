@@ -1,0 +1,964 @@
+2019-11-25 15:59:15.406  INFO 20588 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 20588 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 15:59:15.439 DEBUG 20588 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 15:59:15.440  INFO 20588 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 15:59:15.553  INFO 20588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 15:59:15.554  INFO 20588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 15:59:17.349  INFO 20588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 15:59:17.450  INFO 20588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 5 repository interfaces.
+2019-11-25 15:59:17.977  INFO 20588 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$50930bac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 15:59:18.683  INFO 20588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 15:59:18.770  INFO 20588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 15:59:18.771  INFO 20588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 15:59:18.892  INFO 20588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 15:59:18.893  INFO 20588 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3339 ms
+2019-11-25 15:59:19.360  INFO 20588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 15:59:19.592  INFO 20588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 15:59:19.719  INFO 20588 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 15:59:19.831  INFO 20588 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 15:59:19.832  INFO 20588 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 15:59:20.096  INFO 20588 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 15:59:20.429  INFO 20588 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 15:59:21.493  INFO 20588 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 15:59:21.577  INFO 20588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 15:59:22.121  INFO 20588 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 15:59:22.893  INFO 20588 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 15:59:22.942  WARN 20588 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 15:59:23.001  INFO 20588 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 15:59:23.647  INFO 20588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 15:59:23.649  INFO 20588 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 9.572 seconds (JVM running for 14.515)
+2019-11-25 15:59:45.569  INFO 20588 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 15:59:45.569  INFO 20588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 15:59:45.585  INFO 20588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-11-25 15:59:51.178  INFO 20588 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 15:59:51.393  WARN 20588 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 15:59:51.420  WARN 20588 --- [http-nio-8080-exec-5] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 15:59:51.426  INFO 20588 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 15:59:53.853  INFO 20588 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 15:59:53.958  INFO 20588 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 16:04:16.358  INFO 2704 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 2704 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 16:04:16.378 DEBUG 2704 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 16:04:16.379  INFO 2704 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 16:04:16.531  INFO 2704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 16:04:16.531  INFO 2704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 16:04:17.755  INFO 2704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 16:04:17.871  INFO 2704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 5 repository interfaces.
+2019-11-25 16:04:18.351  INFO 2704 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e6a7f69a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 16:04:19.288  INFO 2704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 16:04:19.366  INFO 2704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 16:04:19.366  INFO 2704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 16:04:19.549  INFO 2704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 16:04:19.549  INFO 2704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3018 ms
+2019-11-25 16:04:19.839  INFO 2704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 16:04:20.056  INFO 2704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 16:04:20.146  INFO 2704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 16:04:20.243  INFO 2704 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 16:04:20.245  INFO 2704 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 16:04:20.461  INFO 2704 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 16:04:20.685  INFO 2704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 16:04:21.956  INFO 2704 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 16:04:22.033  INFO 2704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 16:04:22.524  INFO 2704 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 16:04:23.390  INFO 2704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 16:04:23.447  WARN 2704 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 16:04:23.506  INFO 2704 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 16:04:24.021  INFO 2704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 16:04:24.026  INFO 2704 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 8.591 seconds (JVM running for 11.738)
+2019-11-25 16:04:33.522  INFO 2704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 16:04:33.522  INFO 2704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 16:04:33.541  INFO 2704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-11-25 16:04:33.591  INFO 2704 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 16:04:33.776  INFO 2704 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 16:04:35.028  INFO 2704 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/4', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[4, {}]}
+2019-11-25 16:10:35.703  WARN 2704 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m15s544ms738µs871ns).
+2019-11-25 16:10:36.051  INFO 2704 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog :: commentList
+2019-11-25 16:10:36.095 ERROR 2704 --- [http-nio-8080-exec-5] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-5] Exception processing template "blog::[commentList]": An error happened during template parsing (template: "class path resource [templates/blog.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "#arrays.length(comment.replyComments)" (template: "blog" - line 493, col 51)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "#arrays.length(comment.replyComments)" (template: "blog" - line 493, col 51)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'replyComments' cannot be found on object of type 'com.ws.pojo.Comment' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.MethodReference.getArguments(MethodReference.java:163)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:80)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 86 common frames omitted
+
+2019-11-25 16:10:36.117 ERROR 2704 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/blog.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'replyComments' cannot be found on object of type 'com.ws.pojo.Comment' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90)
+	at org.springframework.expression.spel.ast.MethodReference.getArguments(MethodReference.java:163)
+	at org.springframework.expression.spel.ast.MethodReference.getValueRef(MethodReference.java:80)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueRef(CompoundExpression.java:68)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:89)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:328)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.GreaterThanExpression.executeGreaterThan(GreaterThanExpression.java:77)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:101)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.select.BlockSelectorMarkupHandler.handleCloseElementEnd(BlockSelectorMarkupHandler.java:1178)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-11-25 16:29:35.690  INFO 38824 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 38824 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 16:29:35.692 DEBUG 38824 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 16:29:35.692  INFO 38824 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 16:29:35.797  INFO 38824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 16:29:35.798  INFO 38824 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 16:29:36.660  INFO 38824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 16:29:36.766  INFO 38824 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 5 repository interfaces.
+2019-11-25 16:29:37.101  INFO 38824 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$61cfd2b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 16:29:37.758  INFO 38824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 16:29:37.797  INFO 38824 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 16:29:37.797  INFO 38824 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 16:29:37.961  INFO 38824 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 16:29:37.961  INFO 38824 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2163 ms
+2019-11-25 16:29:38.224  INFO 38824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 16:29:38.332  INFO 38824 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 16:29:38.372  INFO 38824 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 16:29:38.435  INFO 38824 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 16:29:38.439  INFO 38824 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 16:29:38.549  INFO 38824 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 16:29:38.689  INFO 38824 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 16:29:39.321  INFO 38824 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 16:29:39.377  INFO 38824 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 16:29:39.654  INFO 38824 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 16:29:40.234  INFO 38824 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 16:29:40.283  WARN 38824 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 16:29:40.336  INFO 38824 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 16:29:40.839  INFO 38824 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 16:29:40.842  INFO 38824 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.588 seconds (JVM running for 6.352)
+2019-11-25 16:29:54.334  INFO 38824 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 16:29:54.334  INFO 38824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 16:29:54.351  INFO 38824 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-11-25 16:29:54.385  INFO 38824 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 16:29:54.478  WARN 38824 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:29:54.533  WARN 38824 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:29:54.539  INFO 38824 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 16:29:58.290  INFO 38824 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 16:29:58.341  INFO 38824 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 16:31:11.355  INFO 34904 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 34904 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 16:31:11.357 DEBUG 34904 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 16:31:11.357  INFO 34904 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 16:31:11.517  INFO 34904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 16:31:11.518  INFO 34904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 16:31:12.187  INFO 34904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 16:31:12.258  INFO 34904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 5 repository interfaces.
+2019-11-25 16:31:12.559  INFO 34904 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e419647b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 16:31:12.966  INFO 34904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 16:31:12.982  INFO 34904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 16:31:12.983  INFO 34904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 16:31:13.077  INFO 34904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 16:31:13.077  INFO 34904 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1559 ms
+2019-11-25 16:31:13.298  INFO 34904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 16:31:13.386  INFO 34904 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 16:31:13.424  INFO 34904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 16:31:13.470  INFO 34904 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 16:31:13.471  INFO 34904 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 16:31:13.598  INFO 34904 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 16:31:13.727  INFO 34904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 16:31:14.338  INFO 34904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 16:31:14.410  INFO 34904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 16:31:14.689  INFO 34904 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 16:31:15.265  INFO 34904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 16:31:15.311  WARN 34904 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 16:31:15.362  INFO 34904 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 16:31:15.871  INFO 34904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 16:31:15.873  INFO 34904 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.094 seconds (JVM running for 5.844)
+2019-11-25 16:31:22.592  INFO 34904 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 16:31:22.592  INFO 34904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 16:31:22.611  INFO 34904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-11-25 16:31:22.649  INFO 34904 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 16:31:22.763  INFO 34904 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 16:50:34.184  INFO 25412 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 25412 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 16:50:34.186 DEBUG 25412 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 16:50:34.186  INFO 25412 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 16:50:34.340  INFO 25412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 16:50:34.341  INFO 25412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 16:50:35.083  INFO 25412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 16:50:35.165  INFO 25412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 5 repository interfaces.
+2019-11-25 16:50:35.517  INFO 25412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96b70575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 16:50:35.967  INFO 25412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 16:50:35.984  INFO 25412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 16:50:35.985  INFO 25412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 16:50:36.093  INFO 25412 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 16:50:36.093  INFO 25412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1752 ms
+2019-11-25 16:50:36.478  INFO 25412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 16:50:36.609  INFO 25412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 16:50:36.651  INFO 25412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 16:50:36.705  INFO 25412 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 16:50:36.706  INFO 25412 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 16:50:36.831  INFO 25412 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 16:50:37.009  INFO 25412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 16:50:37.608  INFO 25412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 16:50:37.663  INFO 25412 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 16:50:37.937  INFO 25412 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 16:50:38.507  INFO 25412 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 16:50:38.552  WARN 25412 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 16:50:38.598  INFO 25412 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 16:50:39.059  INFO 25412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 16:50:39.061  INFO 25412 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.477 seconds (JVM running for 6.296)
+2019-11-25 16:50:48.211  INFO 25412 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 16:50:48.212  INFO 25412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 16:50:48.230  INFO 25412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-11-25 16:50:48.259  INFO 25412 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 16:50:48.357  WARN 25412 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:50:48.371  WARN 25412 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:50:48.376  INFO 25412 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 16:50:52.535  INFO 25412 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 16:50:52.602  INFO 25412 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 16:54:04.347  INFO 26264 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 26264 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 16:54:04.350 DEBUG 26264 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 16:54:04.350  INFO 26264 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 16:54:04.400  INFO 26264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 16:54:04.401  INFO 26264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 16:54:05.274  INFO 26264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 16:54:05.376  INFO 26264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 5 repository interfaces.
+2019-11-25 16:54:05.781  INFO 26264 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b9e8cae2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 16:54:06.611  INFO 26264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 16:54:06.633  INFO 26264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 16:54:06.634  INFO 26264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 16:54:06.800  INFO 26264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 16:54:06.801  INFO 26264 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2400 ms
+2019-11-25 16:54:06.978  INFO 26264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 16:54:07.126  INFO 26264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 16:54:07.173  INFO 26264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 16:54:07.259  INFO 26264 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 16:54:07.261  INFO 26264 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 16:54:07.389  INFO 26264 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 16:54:07.537  INFO 26264 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 16:54:08.272  INFO 26264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 16:54:08.336  INFO 26264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 16:54:08.676  INFO 26264 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 16:54:09.336  INFO 26264 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 16:54:09.389  WARN 26264 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 16:54:09.448  INFO 26264 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 16:54:09.986  INFO 26264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 16:54:09.988  INFO 26264 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.513 seconds (JVM running for 7.483)
+2019-11-25 16:54:15.462  INFO 26264 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 16:54:15.463  INFO 26264 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 16:54:15.476  INFO 26264 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-11-25 16:54:15.512  INFO 26264 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 16:54:15.629  WARN 26264 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:54:15.644  WARN 26264 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:54:15.650  INFO 26264 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 16:54:19.359  INFO 26264 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 16:54:19.444  INFO 26264 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 16:56:01.751  INFO 32920 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 32920 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 16:56:01.802 DEBUG 32920 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 16:56:01.803  INFO 32920 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 16:56:01.919  INFO 32920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 16:56:01.920  INFO 32920 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 16:56:02.771  INFO 32920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 16:56:02.889  INFO 32920 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110ms. Found 5 repository interfaces.
+2019-11-25 16:56:03.444  INFO 32920 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a9fdeff5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 16:56:04.059  INFO 32920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 16:56:04.079  INFO 32920 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 16:56:04.080  INFO 32920 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 16:56:04.167  INFO 32920 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 16:56:04.167  INFO 32920 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2246 ms
+2019-11-25 16:56:04.403  INFO 32920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 16:56:04.588  INFO 32920 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 16:56:04.635  INFO 32920 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 16:56:04.698  INFO 32920 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 16:56:04.700  INFO 32920 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 16:56:04.834  INFO 32920 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 16:56:04.996  INFO 32920 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 16:56:05.751  INFO 32920 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 16:56:05.819  INFO 32920 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 16:56:06.260  INFO 32920 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 16:56:32.485  INFO 32920 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 16:56:32.541  WARN 32920 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 16:56:32.601  INFO 32920 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 16:56:33.164  INFO 32920 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 16:56:33.167  INFO 32920 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 32.169 seconds (JVM running for 33.275)
+2019-11-25 16:56:41.033  INFO 32920 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 16:56:41.033  INFO 32920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 16:56:41.048  INFO 32920 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-11-25 16:56:41.093  INFO 32920 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 16:56:41.206  WARN 32920 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:56:41.223  WARN 32920 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 16:56:41.230  INFO 32920 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 16:56:43.673  INFO 32920 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 16:56:43.763  INFO 32920 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:07:44.532  INFO 23944 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 23944 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:07:44.535 DEBUG 23944 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:07:44.535  INFO 23944 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:07:44.596  INFO 23944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:07:44.596  INFO 23944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:07:45.553  INFO 23944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:07:45.652  INFO 23944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 5 repository interfaces.
+2019-11-25 17:07:46.078  INFO 23944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7516e48] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:07:46.812  INFO 23944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:07:46.833  INFO 23944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:07:46.833  INFO 23944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:07:46.995  INFO 23944 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:07:46.995  INFO 23944 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2399 ms
+2019-11-25 17:07:47.168  INFO 23944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:07:47.275  INFO 23944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:07:47.325  INFO 23944 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:07:47.394  INFO 23944 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:07:47.396  INFO 23944 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:07:47.535  INFO 23944 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:07:47.686  INFO 23944 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:07:48.414  INFO 23944 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:07:48.480  INFO 23944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:07:48.826  INFO 23944 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:07:49.498  INFO 23944 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:07:49.554  WARN 23944 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:07:49.612  INFO 23944 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:07:50.174  INFO 23944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:07:50.177  INFO 23944 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.347 seconds (JVM running for 7.426)
+2019-11-25 17:07:59.954  INFO 23944 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:07:59.955  INFO 23944 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:07:59.970  INFO 23944 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-11-25 17:08:00.010  INFO 23944 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:08:00.132  WARN 23944 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:08:00.148  WARN 23944 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:08:00.154  INFO 23944 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:08:03.555  INFO 23944 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:08:03.640  INFO 23944 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:08:38.316  INFO 23944 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.ws.web.CommentController.post', args=[Comment{id=null, nickname='John', email='John@qq.com', content='nice!', avatar='null', createTime=null}]}
+2019-11-25 17:09:00.460  INFO 23944 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : redirect:/comments4
+2019-11-25 17:09:28.998  INFO 22192 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 22192 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:09:29.002 DEBUG 22192 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:09:29.002  INFO 22192 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:09:29.091  INFO 22192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:09:29.092  INFO 22192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:09:29.984  INFO 22192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:09:30.130  INFO 22192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133ms. Found 5 repository interfaces.
+2019-11-25 17:09:30.588  INFO 22192 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0a47f50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:09:31.067  INFO 22192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:09:31.086  INFO 22192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:09:31.087  INFO 22192 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:09:31.248  INFO 22192 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:09:31.248  INFO 22192 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2156 ms
+2019-11-25 17:09:31.420  INFO 22192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:09:31.531  INFO 22192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:09:31.576  INFO 22192 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:09:31.639  INFO 22192 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:09:31.641  INFO 22192 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:09:31.781  INFO 22192 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:09:31.940  INFO 22192 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:09:32.733  INFO 22192 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:09:32.796  INFO 22192 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:09:33.134  INFO 22192 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:09:33.812  INFO 22192 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:09:33.867  WARN 22192 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:09:33.922  INFO 22192 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:09:34.484  INFO 22192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:09:34.487  INFO 22192 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.279 seconds (JVM running for 7.292)
+2019-11-25 17:09:46.904  INFO 22192 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:09:46.904  INFO 22192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:09:46.921  INFO 22192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-11-25 17:09:46.959  INFO 22192 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:09:47.073  WARN 22192 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:09:47.086  WARN 22192 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:09:47.091  INFO 22192 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:09:49.977  INFO 22192 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:09:50.043  INFO 22192 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:10:38.781  INFO 26976 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 26976 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:10:38.787 DEBUG 26976 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:10:38.787  INFO 26976 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:10:38.893  INFO 26976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:10:38.893  INFO 26976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:10:39.885  INFO 26976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:10:40.043  INFO 26976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145ms. Found 5 repository interfaces.
+2019-11-25 17:10:40.506  INFO 26976 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$598937c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:10:41.000  INFO 26976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:10:41.021  INFO 26976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:10:41.021  INFO 26976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:10:41.188  INFO 26976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:10:41.189  INFO 26976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2295 ms
+2019-11-25 17:10:41.365  INFO 26976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:10:41.476  INFO 26976 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:10:41.521  INFO 26976 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:10:41.590  INFO 26976 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:10:41.592  INFO 26976 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:10:41.734  INFO 26976 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:10:41.896  INFO 26976 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:10:42.682  INFO 26976 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:10:42.749  INFO 26976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:10:43.107  INFO 26976 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:10:43.799  INFO 26976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:10:43.855  WARN 26976 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:10:43.914  INFO 26976 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:10:44.508  INFO 26976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:10:44.511  INFO 26976 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.472 seconds (JVM running for 7.622)
+2019-11-25 17:10:53.325  INFO 26976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:10:53.325  INFO 26976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:10:53.342  INFO 26976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-11-25 17:10:53.390  INFO 26976 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:10:53.513  WARN 26976 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:10:53.530  WARN 26976 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:10:53.539  INFO 26976 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:10:55.847  INFO 26976 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:10:55.913  INFO 26976 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:20:16.912  INFO 36888 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 36888 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:20:16.914 DEBUG 36888 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:20:16.951  INFO 36888 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:20:17.018  INFO 36888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:20:17.018  INFO 36888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:20:17.678  INFO 36888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:20:17.769  INFO 36888 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84ms. Found 5 repository interfaces.
+2019-11-25 17:20:18.171  INFO 36888 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f9f6257] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:20:18.786  INFO 36888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:20:18.806  INFO 36888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:20:18.806  INFO 36888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:20:18.892  INFO 36888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:20:18.892  INFO 36888 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1873 ms
+2019-11-25 17:20:19.120  INFO 36888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:20:19.209  INFO 36888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:20:19.244  INFO 36888 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:20:19.290  INFO 36888 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:20:19.292  INFO 36888 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:20:19.400  INFO 36888 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:20:19.529  INFO 36888 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:20:20.211  INFO 36888 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:20:20.266  INFO 36888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:20:20.545  INFO 36888 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:20:21.108  INFO 36888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:20:21.169  WARN 36888 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:20:21.220  INFO 36888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:20:21.695  INFO 36888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:20:21.697  INFO 36888 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.18 seconds (JVM running for 5.905)
+2019-11-25 17:20:28.282  INFO 36888 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:20:28.282  INFO 36888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:20:28.298  INFO 36888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-11-25 17:20:28.330  INFO 36888 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:20:28.432  WARN 36888 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:20:28.445  WARN 36888 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:20:28.450  INFO 36888 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:20:31.365  INFO 36888 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:20:31.432  INFO 36888 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:20:35.831  INFO 36888 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:20:35.840  INFO 36888 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:21:33.897  INFO 32244 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 32244 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:21:33.900 DEBUG 32244 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:21:33.900  INFO 32244 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:21:33.968  INFO 32244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:21:33.968  INFO 32244 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:21:34.964  INFO 32244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:21:35.077  INFO 32244 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 5 repository interfaces.
+2019-11-25 17:21:35.548  INFO 32244 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$62ef79f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:21:36.341  INFO 32244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:21:36.363  INFO 32244 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:21:36.364  INFO 32244 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:21:36.567  INFO 32244 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:21:36.567  INFO 32244 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2598 ms
+2019-11-25 17:21:36.731  INFO 32244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:21:36.850  INFO 32244 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:21:36.892  INFO 32244 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:21:36.950  INFO 32244 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:21:36.952  INFO 32244 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:21:37.083  INFO 32244 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:21:37.233  INFO 32244 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:21:38.014  INFO 32244 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:21:38.080  INFO 32244 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:21:38.425  INFO 32244 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:21:39.124  INFO 32244 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:21:39.179  WARN 32244 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:21:39.236  INFO 32244 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:21:39.809  INFO 32244 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:21:39.812  INFO 32244 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.78 seconds (JVM running for 7.741)
+2019-11-25 17:21:44.460  INFO 32244 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:21:44.460  INFO 32244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:21:44.478  INFO 32244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-11-25 17:21:44.519  INFO 32244 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:21:44.630  WARN 32244 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:21:44.646  WARN 32244 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:21:44.651  INFO 32244 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:21:48.012  INFO 32244 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:21:48.098  INFO 32244 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:24:20.439  INFO 6764 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 6764 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:24:20.441 DEBUG 6764 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:24:20.442  INFO 6764 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:24:20.493  INFO 6764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:24:20.493  INFO 6764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:24:21.482  INFO 6764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:24:21.575  INFO 6764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 5 repository interfaces.
+2019-11-25 17:24:22.016  INFO 6764 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a8faeadc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:24:22.696  INFO 6764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:24:22.745  INFO 6764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:24:22.746  INFO 6764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:24:22.984  INFO 6764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:24:22.984  INFO 6764 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2490 ms
+2019-11-25 17:24:23.160  INFO 6764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:24:23.269  INFO 6764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:24:23.312  INFO 6764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:24:23.370  INFO 6764 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:24:23.372  INFO 6764 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:24:23.505  INFO 6764 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:24:23.657  INFO 6764 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:24:24.403  INFO 6764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:24:24.470  INFO 6764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:24:24.796  INFO 6764 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:24:25.470  INFO 6764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:24:25.525  WARN 6764 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:24:25.586  INFO 6764 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:24:26.147  INFO 6764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:24:26.149  INFO 6764 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.306 seconds (JVM running for 7.158)
+2019-11-25 17:24:30.686  INFO 6764 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:24:30.686  INFO 6764 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:24:30.703  INFO 6764 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-11-25 17:24:30.747  INFO 6764 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:24:30.859  WARN 6764 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:24:30.875  WARN 6764 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:24:30.885  INFO 6764 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:24:33.335  INFO 6764 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:24:33.422  INFO 6764 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:24:54.832  INFO 26348 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 26348 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:24:54.834 DEBUG 26348 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:24:54.834  INFO 26348 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:24:54.905  INFO 26348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:24:54.906  INFO 26348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:24:55.519  INFO 26348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:24:55.603  INFO 26348 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73ms. Found 5 repository interfaces.
+2019-11-25 17:24:56.127  INFO 26348 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ed2cc6b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:24:56.547  INFO 26348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:24:56.565  INFO 26348 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:24:56.565  INFO 26348 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:24:56.657  INFO 26348 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:24:56.658  INFO 26348 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1752 ms
+2019-11-25 17:24:56.874  INFO 26348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:24:56.967  INFO 26348 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:24:57.005  INFO 26348 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:24:57.053  INFO 26348 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:24:57.055  INFO 26348 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:24:57.168  INFO 26348 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:24:57.294  INFO 26348 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:24:57.971  INFO 26348 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:24:58.027  INFO 26348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:24:58.318  INFO 26348 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:24:58.883  INFO 26348 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:24:58.944  WARN 26348 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:24:58.991  INFO 26348 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:24:59.449  INFO 26348 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:24:59.451  INFO 26348 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.03 seconds (JVM running for 5.78)
+2019-11-25 17:25:04.941  INFO 26348 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:25:04.941  INFO 26348 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:25:04.957  INFO 26348 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-11-25 17:25:04.989  INFO 26348 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:25:05.088  WARN 26348 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:25:05.101  WARN 26348 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:25:05.106  INFO 26348 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:25:07.901  INFO 26348 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:25:07.959  INFO 26348 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:27:17.724  INFO 25560 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 25560 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:27:17.727 DEBUG 25560 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:27:17.727  INFO 25560 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:27:17.875  INFO 25560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:27:17.876  INFO 25560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:27:18.729  INFO 25560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:27:18.842  INFO 25560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 5 repository interfaces.
+2019-11-25 17:27:19.291  INFO 25560 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$821a62db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:27:20.073  INFO 25560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:27:20.100  INFO 25560 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:27:20.101  INFO 25560 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:27:20.283  INFO 25560 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:27:20.284  INFO 25560 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2408 ms
+2019-11-25 17:27:20.451  INFO 25560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:27:20.569  INFO 25560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:27:20.613  INFO 25560 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:27:20.672  INFO 25560 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:27:20.674  INFO 25560 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:27:20.811  INFO 25560 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:27:20.978  INFO 25560 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:27:21.733  INFO 25560 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:27:21.798  INFO 25560 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:27:22.146  INFO 25560 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:27:22.834  INFO 25560 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:27:22.891  WARN 25560 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:27:22.948  INFO 25560 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:27:23.490  INFO 25560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:27:23.493  INFO 25560 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.466 seconds (JVM running for 7.442)
+2019-11-25 17:27:30.655  INFO 25560 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:27:30.656  INFO 25560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:27:30.671  INFO 25560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-11-25 17:27:30.712  INFO 25560 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:27:30.832  WARN 25560 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:27:30.846  WARN 25560 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:27:30.856  INFO 25560 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:27:33.391  INFO 25560 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:27:33.479  INFO 25560 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:32:19.172  INFO 39008 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 39008 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:32:19.174 DEBUG 39008 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:32:19.175  INFO 39008 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:32:19.250  INFO 39008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:32:19.250  INFO 39008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:32:19.894  INFO 39008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:32:19.977  INFO 39008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 5 repository interfaces.
+2019-11-25 17:32:20.326  INFO 39008 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8929a7f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:32:20.755  INFO 39008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:32:20.775  INFO 39008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:32:20.775  INFO 39008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:32:20.934  INFO 39008 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:32:20.934  INFO 39008 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1684 ms
+2019-11-25 17:32:21.272  INFO 39008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:32:21.389  INFO 39008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:32:21.434  INFO 39008 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:32:21.492  INFO 39008 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:32:21.499  INFO 39008 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:32:21.622  INFO 39008 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:32:21.746  INFO 39008 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:32:22.342  INFO 39008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:32:22.398  INFO 39008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:32:22.667  INFO 39008 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:32:23.241  INFO 39008 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:32:23.285  WARN 39008 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:32:23.394  INFO 39008 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:32:23.862  INFO 39008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:32:23.864  INFO 39008 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.188 seconds (JVM running for 5.908)
+2019-11-25 17:32:31.003  INFO 39008 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:32:31.003  INFO 39008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:32:31.022  INFO 39008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-11-25 17:32:31.053  INFO 39008 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:32:31.149  WARN 39008 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:32:31.164  WARN 39008 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:32:31.171  INFO 39008 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:32:33.784  INFO 39008 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:32:33.855  INFO 39008 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:36:03.568  INFO 39008 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080//comments/4', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[4, {}]}
+2019-11-25 17:36:03.707  INFO 39008 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : blog :: commentList
+2019-11-25 17:37:56.557 ERROR 39008 --- [http-nio-8080-exec-2] c.ws.handler.ControllerExceptionHandler  : Request URL : http://127.0.0.1:8080//comments,Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:419)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:365)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:65)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1232)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1015)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2019-11-25 17:37:56.561  WARN 39008 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-11-25 17:40:47.203  INFO 40804 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 40804 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:40:47.214 DEBUG 40804 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:40:47.214  INFO 40804 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:40:47.313  INFO 40804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:40:47.314  INFO 40804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:40:48.461  INFO 40804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:40:48.541  INFO 40804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 5 repository interfaces.
+2019-11-25 17:40:48.876  INFO 40804 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff6d541d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:40:49.580  INFO 40804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:40:49.656  INFO 40804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:40:49.656  INFO 40804 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:40:49.759  INFO 40804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:40:49.761  INFO 40804 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2447 ms
+2019-11-25 17:40:50.145  INFO 40804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:40:50.337  INFO 40804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:40:50.426  INFO 40804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:40:50.532  INFO 40804 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:40:50.532  INFO 40804 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:40:50.766  INFO 40804 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:40:50.938  INFO 40804 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:40:52.034  INFO 40804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:40:52.149  INFO 40804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:40:52.513  INFO 40804 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:40:53.136  INFO 40804 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:40:53.185  WARN 40804 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:40:53.238  INFO 40804 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:40:53.583  INFO 40804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:40:53.585  INFO 40804 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 7.165 seconds (JVM running for 8.813)
+2019-11-25 17:41:12.096  INFO 38960 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 38960 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-11-25 17:41:12.098 DEBUG 38960 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2019-11-25 17:41:12.098  INFO 38960 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2019-11-25 17:41:12.140  INFO 38960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-25 17:41:12.141  INFO 38960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-25 17:41:12.910  INFO 38960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-25 17:41:12.998  INFO 38960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 5 repository interfaces.
+2019-11-25 17:41:13.538  INFO 38960 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$509c72a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 17:41:14.168  INFO 38960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-25 17:41:14.187  INFO 38960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-25 17:41:14.187  INFO 38960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-11-25 17:41:14.348  INFO 38960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-25 17:41:14.348  INFO 38960 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2207 ms
+2019-11-25 17:41:14.521  INFO 38960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-25 17:41:14.636  INFO 38960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-25 17:41:14.677  INFO 38960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-25 17:41:14.738  INFO 38960 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-11-25 17:41:14.741  INFO 38960 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-25 17:41:14.892  INFO 38960 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-25 17:41:15.041  INFO 38960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-25 17:41:15.785  INFO 38960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-25 17:41:15.849  INFO 38960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-25 17:41:16.265  INFO 38960 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-25 17:41:16.943  INFO 38960 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 17:41:16.993  WARN 38960 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-25 17:41:17.047  INFO 38960 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-25 17:41:17.614  INFO 38960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-25 17:41:17.618  INFO 38960 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 6.487 seconds (JVM running for 7.512)
+2019-11-25 17:41:26.761  INFO 38960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 17:41:26.761  INFO 38960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-25 17:41:26.776  INFO 38960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-11-25 17:41:26.823  INFO 38960 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2019-11-25 17:41:27.082  WARN 38960 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:41:27.105  WARN 38960 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-11-25 17:41:27.111  INFO 38960 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2019-11-25 17:41:30.649  INFO 38960 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:41:30.727  INFO 38960 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog
+2019-11-25 17:43:17.610  INFO 38960 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2019-11-25 17:43:17.615  INFO 38960 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog
