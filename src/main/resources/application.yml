@@ -7,6 +7,10 @@ spring:
     view:
       prefix:
       suffix:
+  messages:
+    basename: i18n/messages
+
+
 comment.avatar: /images/avatar.png
 
 
