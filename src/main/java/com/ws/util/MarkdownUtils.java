@@ -15,7 +15,8 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import java.util.*;
 
 /**
- * Created by limi on 2017/10/22.
+ * @author wusen
+ * @date 2019/10/30 0030-上午 11:23
  */
 public class MarkdownUtils {
 //https://github.com/atlassian/commonmark-java里有源代码

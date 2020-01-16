@@ -5,7 +5,7 @@ import com.ws.pojo.Comment;
 import java.util.List;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/22 0022-下午 13:48
  */
 public interface CommentService {

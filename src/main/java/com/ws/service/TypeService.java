@@ -8,7 +8,7 @@ import java.util.List;
 
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/31 0031-下午 13:53
  */
 public interface TypeService {

@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/28 0028-下午 13:08
  */
 @ControllerAdvice//可以拦截所有含有@controller注解的类

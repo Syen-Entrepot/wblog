@@ -3,7 +3,7 @@ package com.ws.aspectpojo;
 import java.util.Arrays;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/28 0028-下午 15:10
  */
 public class AspectPojo {

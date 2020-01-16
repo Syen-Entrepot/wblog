@@ -1,7 +1,7 @@
 package com.ws.vo;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/4 0004-下午 17:12
  */
 public class BlogQuery {

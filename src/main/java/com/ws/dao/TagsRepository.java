@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/31 0031-下午 14:04
  */
 public interface TagsRepository extends JpaRepository<Tag,Long> {

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/22 0022-下午 13:54
  */
 public interface CommentRepository extends JpaRepository<Comment,Long> {

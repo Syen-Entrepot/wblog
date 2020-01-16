@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/22 0022-下午 13:37
  */
 @Controller

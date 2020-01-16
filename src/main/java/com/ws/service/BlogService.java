@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/4 0004-下午 13:58
  */
 public interface BlogService {

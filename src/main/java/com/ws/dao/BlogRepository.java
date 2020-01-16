@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/4 0004-下午 14:05
  */
 public interface BlogRepository extends JpaRepository<Blog,Long>,JpaSpecificationExecutor<Blog> {

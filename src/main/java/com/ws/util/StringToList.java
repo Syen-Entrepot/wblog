@@ -1,7 +1,7 @@
 package com.ws.util;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/11/5 0005-下午 15:14
  */
 

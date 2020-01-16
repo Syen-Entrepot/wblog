@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/12/17 0017-下午 16:58
  */
 @Controller

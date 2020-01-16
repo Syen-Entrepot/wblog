@@ -12,7 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/28 0028-下午 14:31
  */
 @Aspect//定义此类为切面

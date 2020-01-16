@@ -10,7 +10,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/30 0030-下午 15:39
  */
 @Controller

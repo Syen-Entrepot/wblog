@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * @author Syen
+ * @author wusen
  * @date 2019/10/30 0030-下午 19:02
  */
 public class MD5Utils {
