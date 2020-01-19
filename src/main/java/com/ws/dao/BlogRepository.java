@@ -24,8 +24,8 @@ public interface BlogRepository extends JpaRepository<Blog,Long>,JpaSpecificatio
     @Query("select b from Blog b where b.title like ?1 or b.content like ?1")//这里的1是指第一个参数String query
     Page<Blog> findByQuery(String query,Pageable pageable);
 
-    @Transactional
-    @Modifying
+    @Transactional//更新加上事务
+    @Modifying//更新数据加这个注解
     @Query("update Blog b set b.views = b.views+1 where b.id = ?1")
     int updateViews(Long id);
 

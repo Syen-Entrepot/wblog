@@ -1,6 +1,7 @@
 package com.ws.web;
 
 import com.ws.pojo.Comment;
+import com.ws.pojo.User;
 import com.ws.service.BlogService;
 import com.ws.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * @author wusen
@@ -34,10 +37,18 @@ public class CommentController {
     }
 
     @PostMapping("/comments")
-    public String post(Comment comment){
+    public String post(Comment comment, HttpSession session){
         Long blogId = comment.getBlog().getId();
         comment.setBlog(blogService.getBlog(blogId));
-        comment.setAvatar(avatar);
+        User user =(User) session.getAttribute("user");
+        if (user != null){
+            comment.setAvatar(user.getAvatar());
+            comment.setAdminComment(true);
+           // comment.setNickname(user.getNickname());
+        }else {
+            comment.setAvatar(avatar);
+        }
+
         commentService.saveComment(comment);
         return "redirect:/comments/" + blogId;
     }
