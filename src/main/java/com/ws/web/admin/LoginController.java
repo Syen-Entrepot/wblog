@@ -45,7 +45,7 @@ public class LoginController {
 
     }
 
-    //注销
+    //退出
     @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user");//清空session

@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    /* background-color: #0000; */
+}
+
+.dowebok {
+    background: rgba(65, 105, 225, .5);
+    position: relative;
+    /* left: 50%;
+    top: 50%; */
+    width: 430px;
+    height: 500px;
+    margin: -300px 0 0 -215px;
+    border: 1px solid #BABABA;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    /* 有这个会让主div覆盖在cancel的div上 */
+}
+
+.logo {
+    text-align: center;
+    line-height: 104px;
+    width: 104px;
+    height: 104px;
+    margin: 30px auto 30px;
+    /*background: url(../img/login.png) 0 0 no-repeat;*/
+    background-color: palegoldenrod;
+    border-radius: 50%;
+}
+
+.form-item {
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.form_login_reg {
+    position: relative;
+    width: 430px;
+    height: 48px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    margin-bottom: -10px;
+}
+
+.login_a {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: orange;
+}
+
+.register_a {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    background-color: rgba(65, 105, 225, .2);
+    border-radius: 5px;
+}
+
+.login_b {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: rgba(65, 105, 225, .2);
+}
+
+.register_b {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: orange;
+}
+
+.login_a .submit {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: rgba(65, 105, 225, .2);
+    cursor: pointer;
+}
+
+.register_a .submit {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: rgba(65, 105, 225, .2);
+    cursor: pointer;
+}
+
+.login_b .submit {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: rgba(65, 105, 225, .2);
+    cursor: pointer;
+}
+
+.register_b .submit {
+    text-align: center;
+    line-height: 48px;
+    width: 214px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    border: 1px solid rgba(65, 105, 225, .3);
+    border-radius: 5px;
+    background-color: rgba(65, 105, 225, .2);
+    cursor: pointer;
+}
+
+.form-item input {
+    margin-top: 30px;
+    width: 288px;
+    height: 48px;
+    padding-left: 70px;
+    border: 1px solid #B0E2FF;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #1F1F1F;
+    background-color: white;
+    outline: none;
+}
+
+.form-item button {
+    width: 360px;
+    height: 50px;
+    border: 0;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #1F1F1F;
+    outline: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #B0E2FF 0%, #1F1F1F 100%);
+}
+
+#email {
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 20px 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#aquire_check{
+    margin-top: -25px;
+}
+#aquire_password{
+    margin-top: -25px;
+}
+
+#username {
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 20px 10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* .form-item #e {
+    width: 20px;
+    height: 20px;
+} */
+
+#check_code {
+    width: 170px;
+    background-image: url(../images/验证码.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 20px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    /* background-size: 20px 20px;
+    background: url(/img/password.png) 23px 11px no-repeat; */
+}
+
+#check_button {
+    padding-left: 0px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    border-radius: 0px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    background-color: #4876FF;
+}
+
+#password {
+    background-image: url(../images/password.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 20px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    /* background-size: 20px 20px;
+    background: url(/img/password.png) 23px 11px no-repeat; */
+}
+
+.cancel {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    transform: translate(100%, -50%);
+}
+
+.cancel img {
+    width: 30px;
+    height: 30px;
+}
+
+.tip {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 52px;
+    font-size: 14px;
+    color: #f50;
+}
+
+.reg-bar {
+    width: 360px;
+    margin: 5px auto 0;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.reg-bar a {
+    color: blue;
+    text-decoration: none;
+}
+
+.reg-bar a:hover {
+    text-decoration: underline;
+}
+
+
+/* .reg-bar .reg {
+    float: left;
+} */
+
+.reg-bar .forget {
+    float: right;
+}
+
+.dowebok ::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height:normal;
+    color: #7CCD7C;
+}
+
+/*.dowebok :-moz-placeholder {*/
+    /*font-size: 18px;*/
+    /*line-height: normal;*/
+    /*color: #7CCD7C;*/
+/*}*/
+
+/*.dowebok ::-moz-placeholder {*/
+    /*font-size: 18px;*/
+    /*line-height: normal;*/
+    /*color: #7CCD7C;*/
+/*}*/
+
+.dowebok :-ms-input-placeholder {
+    font-size: 18px;
+    line-height: normal;
+    color: #7CCD7C;
+}
+
+@media screen and (max-width: 500px) {
+    * {
+        box-sizing: border-box;
+    }
+    .dowebok {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0 30px;
+        border: 0;
+        border-radius: 0;
+    }
+    .logo {
+        margin: 50px auto;
+    }
+    .form-item {
+        width: auto;
+    }
+    .form-item input,
+    .form-item button,
+    .reg-bar {
+        width: 100%;
+    }
+}
+
+
+/* 弹框的css */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.c1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.c2 {
+    /* background-color: white; */
+    position: fixed;
+    /* width: 400px;
+    height: 300px; */
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    /* margin-top: -150px;
+    margin-left: -200px; */
+}
+
+
+#denglu{
+    color: red;
+}
+
+/* #modal p {
+    margin-left: 80px;
+} */

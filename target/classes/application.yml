@@ -9,6 +9,16 @@ spring:
       suffix:
   messages:
     basename: i18n/messages
+  #邮箱
+  mail:
+    host: smtp.qq.com
+    password: blhkyajfybzedidi
+    username: 15577564938@qq.com
+    default-encoding: UTF-8
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
 
 
 comment.avatar: /images/avatar.png
