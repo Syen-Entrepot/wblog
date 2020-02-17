@@ -21,7 +21,6 @@ public class Blog {
     @Lob
     private String content;//string类型的数据长度为255，这里加了两个注解可以让它的数据类型由string变为longtext
 
-    private String firstPicture;
     private String flag;
     private Integer views;
     private boolean appreciation;
@@ -77,14 +76,6 @@ public class Blog {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public String getFirstPicture() {
-        return firstPicture;
-    }
-
-    public void setFirstPicture(String firstPicture) {
-        this.firstPicture = firstPicture;
     }
 
     public String getFlag() {
@@ -236,7 +227,6 @@ public class Blog {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
                 ", flag='" + flag + '\'' +
                 ", views=" + views +
                 ", appreciation=" + appreciation +

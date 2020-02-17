@@ -16,7 +16,7 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nickname;
+//    private String nickname;
     private String email;
     private String content;
     private String avatar;
@@ -43,14 +43,6 @@ public class Comment {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
     }
 
     public String getEmail() {
@@ -121,7 +113,6 @@ public class Comment {
     public String toString() {
         return "Comment{" +
                 "id=" + id +
-                ", nickname='" + nickname + '\'' +
                 ", email='" + email + '\'' +
                 ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +

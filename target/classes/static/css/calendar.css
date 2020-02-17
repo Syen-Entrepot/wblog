@@ -1,0 +1,110 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+html,
+body {
+    background: #f2f2f2;
+}
+
+.calendar {
+    width: 268px;
+    height: 320px;
+    background: white;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+.title {
+    height: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    text-align: center;
+}
+
+#calendar-title {
+    margin-top: -10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 14px 0 0 0;
+}
+
+#calendar-year {
+    margin-top: -20px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+#pre {
+    background-image: url(../images/page_preview.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    /*background: url(../images/page_preview.png) no-repeat 50% 50%;*/
+    /*没规定大小时，图片显示 0X0*/
+    width: 30px;
+    height: 30px;
+}
+
+#next {
+    background-image: url(../images/page_next.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+
+}
+
+.body-list ul {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.body-list ul li {
+    list-style: none;
+    /*
+    display:inline-block;
+    width: 13.3%;
+    */
+    /*100/7 = 14.28%*/
+    display: block;
+    width: 14.28%;
+    float: left;
+    /*规定行高，垂直居中*/
+    height: 36px;
+    line-height: 36px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.green {
+    color: #6ac13c;
+}
+
+.lightgrey {
+    /*浅灰色显示过去的日期*/
+    color: #a8a8a8;
+}
+
+.darkgrey {
+    /*深灰色显示将来的日期*/
+    color: #565656;
+}
+
+
+/*日期当天用绿色背景绿色文字加以显示*/
+
+.greenbox {
+    border: 1px solid #6ac13c;
+    background: #e9f8df;
+}

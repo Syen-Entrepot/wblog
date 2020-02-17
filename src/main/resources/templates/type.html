@@ -43,7 +43,7 @@
                      <h3 class="ui teal header">分类</h3>
                  </div>
                  <div class="right aligned column">
-                     共<h2 class="ui orange header m-inline-block m-text-thin"  >14</h2>个
+                     共<h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}" >14</h2>个
                  </div>
              </div>
          </div>
@@ -68,7 +68,7 @@
          <div class="ui top attached teal segment">
              <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
                  <div class="ui middle aligned mobile reversed stackable grid">
-                     <div class="ui eleven wide column">
+                     <div class="ui twenty wide column">
                          <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你了解互联网这个行业吗？</a></h3>
                          <p class="m-text" th:text="|${blog.description}......|">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
                              分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
@@ -94,11 +94,11 @@
                              </div>
                          </div>
                      </div>
-                     <div class="five wide column">
-                         <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                             <img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
-                         </a>
-                     </div>
+                     <!--<div class="five wide column">-->
+                         <!--<a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">-->
+                             <!--<img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">-->
+                         <!--</a>-->
+                     <!--</div>-->
                  </div>
              </div>
 

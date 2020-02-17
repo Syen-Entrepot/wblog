@@ -55,10 +55,10 @@
                 </div>
             </div>
         </div>
-        <div class="ui attached segment">
-            <!--图片区域-->
-            <img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded fluid image">
-        </div>
+        <!--<div class="ui attached segment">-->
+            <!--&lt;!&ndash;图片区域&ndash;&gt;-->
+            <!--<img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded fluid image">-->
+        <!--</div>-->
         <div class="ui attached padded segment">
             <!--内容-->
             <div class="ui right aligned basic segment">
@@ -477,7 +477,7 @@ h5,h6{font-size:1em;}
                             </a>
                             <div class="content">
                                 <a class="author" >
-                                    <span th:text="${comment.nickname}">Matt</span>
+                                    <span th:text="${comment.email}">Matt</span>
                                     <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${comment.adminComment}">博主</div>
                                 </a>
                                 <div class="metadata">
@@ -487,7 +487,7 @@ h5,h6{font-size:1em;}
                                     How artistic!
                                 </div>
                                 <div class="actions">
-                                    <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}" onclick="reply(this)">回复</a>
+                                    <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentemail=${comment.email}" onclick="reply(this)">回复</a>
                                 </div>
                             </div>
                             <!--第二层级评论-->
@@ -498,9 +498,9 @@ h5,h6{font-size:1em;}
                                     </a>
                                     <div class="content">
                                         <a class="author" >
-                                            <span th:text="${reply.nickname}">小红</span>
+                                            <span th:text="${reply.email}">小红</span>
                                             <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
-                                           &nbsp <span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@小白</span>
+                                           &nbsp <span th:text="|@ ${reply.parentComment.email}|" class="m-teal">@小白</span>
                                         </a>
                                         <div class="metadata">
                                             <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
@@ -509,7 +509,7 @@ h5,h6{font-size:1em;}
                                             How artistic!
                                         </div>
                                         <div class="actions">
-                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>
+                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentemail=${reply.email}" onclick="reply(this)">回复</a>
                                         </div>
                                     </div>
                                 </div>
@@ -584,16 +584,16 @@ h5,h6{font-size:1em;}
                 <div class="fields">
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input type="text" name="nickname" placeholder="姓名" th:value="${session.user}!=null ? ${session.user.nickname}">
-                        </div>
-                    </div>
-                    <div class="field m-mobile-wide m-margin-bottom-small">
-                        <div class="ui left icon input">
                             <i class="mail icon"></i>
-                            <input type="text" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
+                            <input type="text" name="email" placeholder="邮箱" th:value="${session.email}">
                         </div>
                     </div>
+                    <!--<div class="field m-mobile-wide m-margin-bottom-small">-->
+                        <!--<div class="ui left icon input">-->
+                            <!--<i class="mail icon"></i>-->
+                            <!--<input type="text" name="email" placeholder="邮箱" th:value=" ${session.email}">-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <div class="field  m-margin-bottom-small m-mobile-wide">
                         <button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
                     </div>
@@ -764,13 +764,13 @@ h5,h6{font-size:1em;}
                 }
                 ]
             },
-            content: {
-                identifier: 'nickname',
-                rules: [{
-                    type: 'empty',
-                    prompt: '请输入你的大名'
-                }]
-            },
+            // content: {
+            //     identifier: 'nickname',
+            //     rules: [{
+            //         type: 'empty',
+            //         prompt: '请填写正确的邮箱地址'
+            //     }]
+            // },
             type: {
                 identifier: 'email',
                 rules: [{
@@ -801,7 +801,7 @@ h5,h6{font-size:1em;}
         $("#comment-container").load(/*[[@{/comments}]]*/"",{
             "parentComment.id" : $("[name='parentComment.id']").val(),
             "blog.id" : $("[name='blog.id']").val(),
-            "nickname": $("[name='nickname']").val(),
+            // "nickname": $("[name='nickname']").val(),
             "email"   : $("[name='email']").val(),
             "content" : $("[name='content']").val()
         },function (responseTxt, statusTxt, xhr) {
@@ -819,8 +819,8 @@ h5,h6{font-size:1em;}
 
     function reply(obj) {
         var commentId = $(obj).data('commentid');
-        var commentNickname = $(obj).data('commentnickname');
-        $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+        var commentEmail = $(obj).data('commentemail');
+        $("[name='content']").attr("placeholder", "@"+commentEmail).focus();
         $("[name='parentComment.id']").val(commentId);
         $(window).scrollTo($('#comment-form'),500);
     }
