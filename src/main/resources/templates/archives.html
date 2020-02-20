@@ -40,7 +40,7 @@
          <div class="ui top attached padded segment">
              <div class="ui middle aligned two column grid">
                  <div class="column">
-                     <h3 class="ui teal header">归档</h3>
+                     <h3 class="ui Black header">归档</h3>
                  </div>
                  <div class="right aligned column">
                      共<h2 class="ui orange header m-inline-block m-text-thin" th:text="${blogCount}">124</h2>个
@@ -53,8 +53,8 @@
          <div class="ui fluid vertical menu">
              <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" th:each="blog : ${item.value}">
                  <span>
-                 <i class="mini teal circle icon"></i><span th:text="${blog.title}">万物理论</span>
-                     <div class="ui teal basic left pointing label m-padded-mini" th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月3号</div>
+                 <i class="mini violet circle icon"></i><span th:text="${blog.title}">万物理论</span>
+                     <div class="ui violet basic left pointing label m-padded-mini" th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月3号</div>
                  </span>
                  <div class="ui orange basic left pointing label m-padded-mini" th:text="${blog.flag}">原创</div>
              </a>
@@ -65,18 +65,17 @@
 
 </div>
 
-         <!--分页footer-->
-         <div class="ui m-container-small bottom attached segment">
-             <div class="ui middle aligned two column grid">
-                 <div class="column">
-                     <a href="#" class="ui mini teal basic button">上一页</a>
-                 </div>
-                 <div class="right aligned column">
-                     <a href="#" class="ui mini teal basic button">下一页</a>
-
-                 </div>
-             </div>
-         </div>
+<!--分页footer-->
+<!--<div class="ui bottom attached segment" th:if="${page.totalPages}>1">-->
+    <!--<div class="ui middle aligned two column grid">-->
+        <!--<div class="column">-->
+            <!--<a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini violet basic button">上一页</a>-->
+        <!--</div>-->
+        <!--<div class="right aligned column">-->
+            <!--<a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui mini violet basic button">下一页</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
      </div>
 

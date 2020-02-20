@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
     <link rel="stylesheet" href="../static/css/calendar.css" th:href="@{/css/calendar.css}">
-    <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
-    <!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
 </head>
 <body>
 
@@ -24,19 +22,15 @@
 <nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui teal header item">森</h2>
-            <a href="#" th:href="@{/}" class=" m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i> 首页</a>
+            <h2 class="ui inverted header item">森日常</h2>
+            <div class="right m-item item aligned column">
+            <a href="#" th:href="@{/}" class=" m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i> 主页</a>
             <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i> 分类</a>
             <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i> 标签</a>
             <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i> 归档</a>
             <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于博主</a>
-
-            <div class="right m-item item m-mobile-hide">
-                <div class="ui icon inverted transparent input">
-                    <input type="text" placeholder="搜索">
-                    <i class="search link icon"></i>
-                </div>
             </div>
+
         </div>
     </div>
     <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
@@ -91,8 +85,8 @@
                 </div>
 
             </div>
-
-            <!-- 注册页面 -->
+            <!-- 登录页面 -->
+            <form  method="post" target="_blank" action="#" th:action="@{/admin/login}">
             <div id="dowebok_register">
                 <div class="dowebok">
                     <div class="logo">博主登录</div>
@@ -107,11 +101,11 @@
                     </div>
 
                     <div class="form-item">
-                        <input id="username" type="text" autocomplete="off" placeholder="登录账号">
+                        <input id="username" type="text" name="username" autocomplete="off" placeholder="登录账号">
                     </div>
                     <div class="form-item">
                         <div id="aquire_password">
-                            <input id="password" type="password" autocomplete="off" placeholder="密码">
+                            <input id="password" type="password" name="password" autocomplete="off" placeholder="密码">
                         </div>
                     </div>
                     <div class="form-item">
@@ -123,7 +117,7 @@
                 </div>
             </div>
 
-
+            </form>
         </div>
 
     </div>
@@ -189,6 +183,14 @@
             $('.btn').toggleClass('btnc');
             $('.sidebar').toggleClass('side');
         });
+
+        $('#m_submit').on("click",function () {
+            setTimeout(function () {
+                location.reload();//这条语句延迟两秒刷新
+            },2000);
+        });
+
+
     </script>
 </th:block>
 </body>

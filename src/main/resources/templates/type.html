@@ -38,9 +38,9 @@
      <div class="ui container">
          <!--header-->
          <div class="ui top attached segment">
-             <div class="ui middle aligned two column grid">
+             <div class="ui  aligned two column grid">
                  <div class="column">
-                     <h3 class="ui teal header">分类</h3>
+                     <h3 class="ui Black header">分类</h3>
                  </div>
                  <div class="right aligned column">
                      共<h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}" >14</h2>个
@@ -50,8 +50,8 @@
          <!--分类-->
          <div class="ui attached segment m-padded-tb-large">
              <div class="ui labeled button m-margin-tb-tiny" th:each="type : ${types}">
-                 <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic button" th:classappend="${type.id==activeTypeId} ? 'teal'" th:text="${type.name}">思考与感悟</a>
-                 <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'teal'" th:text="${#arrays.length(type.blogs)}">23</div>
+                 <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic button" th:classappend="${type.id==activeTypeId} ? 'violet'" th:text="${type.name}">思考与感悟</a>
+                 <div class="ui basic left pointing label" th:classappend="${type.id==activeTypeId} ? 'violet'" th:text="${#arrays.length(type.blogs)}">23</div>
              </div>
 <!--
              <div class="ui labeled button m-margin-tb-tiny">
@@ -65,10 +65,10 @@
 
          </div>
          <!--博客列表-->
-         <div class="ui top attached teal segment">
+         <div class="ui  attached ">
              <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
-                 <div class="ui middle aligned mobile reversed stackable grid">
-                     <div class="ui twenty wide column">
+                 <div>
+                     <div class="ui sixteen segment wide column">
                          <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你了解互联网这个行业吗？</a></h3>
                          <p class="m-text" th:text="|${blog.description}......|">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
                              分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
@@ -90,7 +90,7 @@
                                  </div>
                              </div>
                              <div class="right aligned five wide column">
-                                 <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">认知升级</a>
+                                 <a href="#" target="_blank" class="ui violet basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">认知升级</a>
                              </div>
                          </div>
                      </div>
@@ -108,10 +108,10 @@
          <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
              <div class="ui middle aligned two column grid">
                  <div class="column">
-                     <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
+                     <a href="#" th:href="@{/(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini violet basic button">上一页</a>
                  </div>
                  <div class="right aligned column">
-                     <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
+                     <a href="#" th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui mini violet basic button">下一页</a>
                  </div>
              </div>
          </div>

@@ -54,10 +54,10 @@ public class EmailController {
     public String getCheckCode(String email){
         checkCode = String.valueOf(new Random().nextInt(899999) + 100000);
         clientEmail = email;
-        String message = "您的注册验证码为："+checkCode;
+        String message = "您的登录验证码为："+checkCode;
         String bb = clientEmail + message;
         try {
-            emailService.sendSimpleMail(email, "注册验证码", message);
+            emailService.sendSimpleMail(email, "登录验证码", message);
             CURRENT_TIME = new Date();
         }catch (Exception e){
             //e.printStackTrace();
