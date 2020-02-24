@@ -22,17 +22,17 @@
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">森日常</h2>
             <div class="right m-item item aligned column">
-            <a href="#" th:href="@{/}" class="active m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i> 首页</a>
-            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i> 分类</a>
-            <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i> 标签</a>
-            <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i> 归档</a>
-            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于博主</a>
+                <a href="#" th:href="@{/}" class="active m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i> 首页</a>
+                <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i> 分类</a>
+                <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i> 标签</a>
+                <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i> 归档</a>
+                <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于博主</a>
             </div>
             <!--<div class="right m-item item m-mobile-hide">-->
-                <!--<div class="ui icon inverted transparent input">-->
-                    <!--<input type="text" placeholder="搜索">-->
-                    <!--<i class="search link icon"></i>-->
-                <!--</div>-->
+            <!--<div class="ui icon inverted transparent input">-->
+            <!--<input type="text" placeholder="搜索">-->
+            <!--<i class="search link icon"></i>-->
+            <!--</div>-->
             <!--</div>-->
         </div>
     </div>
@@ -42,11 +42,11 @@
 </nav>
 
 <!--中间内容-->
-<div class="m-container m-padded-tb-big">
+<div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <div class="ui stackable grid">
             <!--左边博客列表-->
-            <div class="eleven wide column">
+            <div class="sixteen wide column">
                 <!--header-->
                 <div class="ui top attached segment">
                     <div class="ui middle aligned two column grid">
@@ -58,10 +58,93 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="ui inverted top attached segment">
+                    <div class="ui middle center aligned three column grid">
+                        <!--日历-->
+                        <div class="ui five wide column grid">
+                            <!--<div class="ui segment">-->
+                                <div class="calendar">
+                                    <div class="title">
+                                        <h1 class="green" id="calendar-title">Month</h1>
+                                        <h2 class="green" id="calendar-year">Year</h2>
+                                        <a href="" id="pre"></a>
+                                        <a href="" id="next"></a>
+                                    </div>
+
+                                    <div class="body">
+                                        <div class="lightgrey body-list">
+                                            <ul>
+                                                <li>SUN</li>
+                                                <li>MON</li>
+                                                <li>TUE</li>
+                                                <li>WED</li>
+                                                <li>THU</li>
+                                                <li>FRI</li>
+                                                <li>SAT</li>
+
+                                            </ul>
+
+                                        </div>
+
+                                        <div class="darkgrey body-list">
+                                            <ul id="days">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <!--搜索框-->
+                        <div class="m-item item m-input m-mobile-hide" STYLE="padding-left: unset">
+                            <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                                <div class="ui icon inverted input">
+                                    <input type="text" name="query" placeholder="搜索....." th:value="${query}"><!--div用text,这里用value -->
+                                    <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <!--最新推荐-->
+                        <div class="ui five wide column right segments m-margin-top-large">
+                            <div class="ui secondary segment">
+                                <i class="bookmark icon"></i> 最新推荐
+                            </div>
+                            <div class="ui segment" th:each="blog : ${recommendBlogs}">
+                                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin" th:text="${blog.title}">槽坊论</a>
+                            </div>
+                            <!--/*-->
+                            <div class="ui segment">
+                                <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
+                            </div>
+                            <div class="ui segment">
+                                <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
+                            </div>
+                            <div class="ui segment">
+                                <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
+                            </div>
+                            <div class="ui segment">
+                                <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
+                            </div>
+                            <div class="ui segment">
+                                <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
+                            </div>
+                            <!--*/-->
+                        </div>
+
+
+                    </div>
+                </div>
+
                 <!--content-->
                 <div class="ui attached ">
                     <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
-                    <!--<div class="ui middle aligned mobile reversed stackable grid">-->
+                        <!--<div class="ui middle aligned mobile reversed stackable grid">-->
                         <div class="ui sixteen segment wide column">
                             <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">你了解互联网这个行业吗？</a></h3>
                             <p class="m-text" th:text="|${blog.description}......|">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
@@ -88,191 +171,13 @@
                                 </div>
                             </div>
                             <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"></a>
-                        <!--</div>-->
+                            <!--</div>-->
 
-                        <!--<div class="five wide column">-->
-                        <!--<a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"></a>-->
-                    <!--</div>-->
-                    </div>
-                </div>
-
-                    <!--/*-->
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="ui eleven wide column">
-                                <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                                <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                                    分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                                    不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                                </p>
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Syen</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2019-08-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 1314
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="five wide column">
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="ui eleven wide column">
-                                <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                                <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                                    分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                                    不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                                </p>
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Syen</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2019-08-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 1314
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="five wide column">
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="ui eleven wide column">
-                                <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                                <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                                    分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                                    不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                                </p>
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Syen</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2019-08-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 1314
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="five wide column">
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="ui eleven wide column">
-                                <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                                <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                                    分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                                    不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                                </p>
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Syen</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2019-08-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 1314
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="five wide column">
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui padded vertical segment m-padded-tb-large">
-                        <div class="ui mobile reversed stackable grid">
-                            <div class="ui eleven wide column">
-                                <h3 class="ui header">你了解互联网这个行业吗？</h3>
-                                <p class="m-text">大家都知道互联网造富能力是很强的，传统产业是不是也应该投身其中，
-                                    分一杯羹?不知道该如何用好互联网，不知道该不该进军互联网，
-                                    不知道未来的互联网将怎样定义这个世界，该转型还是该转行，这正是时下很多传统企业的“互联网焦虑”。
-                                </p>
-                                <div class="ui grid">
-                                    <div class="eleven wide column">
-                                        <div class="ui mini horizontal link list">
-                                            <div class="item">
-                                                <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">
-                                                <div class="content"><a href="#" class="header">Syen</a></div>
-                                            </div>
-                                            <div class="item">
-                                                <i class="calendar icon"></i> 2019-08-15
-                                            </div>
-                                            <div class="item">
-                                                <i class="eye icon"></i> 1314
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned five wide column">
-                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
-                                    </div>
-                                </div>
-                            </div>
                             <!--<div class="five wide column">-->
-                                <a href="#" target="_blank">
-                                    <img src="https://unsplash.it/800/450?image=1004" alt="" class="ui rounded image">
-                                </a>
+                            <!--<a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank"></a>-->
                             <!--</div>-->
                         </div>
                     </div>
-                    <!--*/-->
 
                 </div>
                 <!--footer-->
@@ -289,186 +194,13 @@
                 </div>
 
             </div>
-            <!--右边的top-->
-            <div class="five wide column">
-                <!--搜索框-->
-                <div class="right m-item item m-input m-mobile-hide">
-                    <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
-                        <div class="ui icon inverted input">
-                            <input type="text" name="query" placeholder="搜索....." th:value="${query}"><!--div用text,这里用value -->
-                            <i onclick="document.forms['search'].submit()" class="search link icon"></i>
-                        </div>
-                    </form>
-                </div>
-                <!--日历-->
-                <div class="ui secondary segment">
-                    <div class="ui two column grid">
-                        <div class="ui segment">
-                            <div class="calendar">
-                                <div class="title">
-                                    <h1 class="green" id="calendar-title">Month</h1>
-                                    <h2 class="green" id="calendar-year">Year</h2>
-                                    <a href="" id="pre"></a>
-                                    <a href="" id="next"></a>
-                                </div>
+            <!--&lt;!&ndash;右边的top&ndash;&gt;-->
+            <!--<div class="five wide column">-->
 
-                                <div class="body">
-                                    <div class="lightgrey body-list">
-                                        <ul>
-                                            <li>SUN</li>
-                                            <li>MON</li>
-                                            <li>TUE</li>
-                                            <li>WED</li>
-                                            <li>THU</li>
-                                            <li>FRI</li>
-                                            <li>SAT</li>
 
-                                        </ul>
 
-                                    </div>
 
-                                    <div class="darkgrey body-list">
-                                        <ul id="days">
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--分类-->
-               <div class="ui segments m-margin-top-large">
-                   <div class="ui secondary segment">
-                       <div class="ui two column grid">
-                           <div class="column">
-                               <i class="idea icon"></i> 分类
-                           </div>
-                           <div class="right aligned column">
-                               <a href="#" th:href="@{/types/-1}" target="_blank">更多</a>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="ui segment">
-                       <div class="ui fluid vertical menu">
-                           <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item" th:each="type : ${types}">
-                               <span th:text="${type.name}">学习日志</span>
-                               <div class="ui label violet basic left pointing label" th:text="${#arrays.length(type.blogs)}">11</div>
-                           </a>
-                           <!--/*-->
-                           <a href="#" class="item">
-                               思考与感悟
-                               <div class="ui label teal basic left pointing label">11</div>
-                           </a>
-                           <a href="#" class="item">
-                               学习日志
-                               <div class="ui label teal basic left pointing label">11</div>
-                           </a>
-                           <a href="#" class="item">
-                               学习日志
-                               <div class="ui label teal basic left pointing label">11</div>
-                           </a>
-                           <a href="#" class="item">
-                               学习日志
-                               <div class="ui label teal basic left pointing label">11</div>
-                           </a>
-                           <a href="#" class="item">
-                               学习日志
-                               <div class="ui label teal basic left pointing label">11</div>
-                           </a>
-                           <a href="#" class="item">
-                               学习日志
-                               <div class="ui label teal basic left pointing label">11</div>
-                           </a>
-                           <!--*/-->
-                       </div>
-                   </div>
-               </div>
-                <!--标签-->
-                <div class="ui segments m-margin-top-large">
-                    <div class="ui secondary segment">
-                        <div class="ui two column grid">
-                            <div class="column">
-                                <i class="tags icon"></i> 标签
-                            </div>
-                            <div class="right aligned column">
-                                <a href="#" th:href="@{/tags/-1}" target="_blank">更多</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui label violet basic left pointing label m-margin-tb-tiny" th:each="tag : ${tags}">
-                            <span th:text="${tag.name}">学习方法论</span>
-                            <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
-                        </a>
-                        <!--/*-->
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            物理法则
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny" >
-                            方法论
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            方法论
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            泰
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            知性
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            方法论
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            方法论
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            方法论
-                            <div class="detail">23</div>
-                        </a>
-                        <a href="#" class="ui label teal basic left pointing label m-margin-tb-tiny">
-                            方法论
-                            <div class="detail">23</div>
-                        </a>
-                        <!--*/-->
-                    </div>
-                </div>
-
-                <!--最新推荐-->
-                <div class="ui segments m-margin-top-large">
-                    <div class="ui secondary segment">
-                        <i class="bookmark icon"></i> 最新推荐
-                    </div>
-                    <div class="ui segment" th:each="blog : ${recommendBlogs}">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text-thin" th:text="${blog.title}">槽坊论</a>
-                    </div>
-                    <!--/*-->
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="m-black m-text-thin">槽坊论</a>
-                    </div>
-                    <!--*/-->
-                </div>
-            </div>
+            <!--</div>-->
         </div>
     </div>
 
@@ -484,81 +216,81 @@
 </div>
 
 <div th:replace="_fragments :: login_logout">
-        <button id="m_quit" class="hide" onclick="show_confirm()">退出</button>
-        <div id="shade" class="c1 hide"></div>
-        <div id="modal" class="c2 hide">
+    <button id="m_quit" class="hide" onclick="show_confirm()">退出</button>
+    <div id="shade" class="c1 hide"></div>
+    <div id="modal" class="c2 hide">
 
-            <div>
-                <!-- 登录页面 -->
-                <div id="dowebok_login">
-                    <div class="dowebok">
-                        <div class="logo">游客登录</div>
-                        <!-- <hr /> -->
-                        <div class="form_login_reg">
-                            <div class="login_a">
-                                <!--  id="submit" -->
-                                <b id="e_submit" class="submit" onclick="dowebok_login()">游客登录</b>
-                            </div>
-                            <div class="register_a">
-                                <b id="l_submit" class="submit" onclick="dowebok_register()">博主登录</b>
-                            </div>
+        <div>
+            <!-- 登录页面 -->
+            <div id="dowebok_login">
+                <div class="dowebok">
+                    <div class="logo">游客登录</div>
+                    <!-- <hr /> -->
+                    <div class="form_login_reg">
+                        <div class="login_a">
+                            <!--  id="submit" -->
+                            <b id="e_submit" class="submit" onclick="dowebok_login()">游客登录</b>
                         </div>
-
-                        <div class="form-item">
-                            <input id="email" type="text" autocomplete="off" placeholder="邮箱">
-                        </div>
-                        <div class="form-item">
-                            <div id="aquire_check">
-                                <input id="check_code" type="text"autocomplete="off" placeholder="验证码">
-                                <input id="check_button" type="button" onclick="settime(this)" value="获取验证码" />
-
-                            </div>
-                        </div>
-                        <div class="form-item">
-                            <button id="c_submit" class="submit">登 录</button>
-                        </div>
-                        <div class="cancel">
-                            <img src="../static/images/038-cancel.png" th:src="@{/images/038-cancel.png}" onclick="Hide()" />
+                        <div class="register_a">
+                            <b id="l_submit" class="submit" onclick="dowebok_register()">博主登录</b>
                         </div>
                     </div>
 
-                </div>
+                    <div class="form-item">
+                        <input id="email" type="text" autocomplete="off" placeholder="邮箱">
+                    </div>
+                    <div class="form-item">
+                        <div id="aquire_check">
+                            <input id="check_code" type="text"autocomplete="off" placeholder="验证码">
+                            <input id="check_button" type="button" onclick="settime(this)" value="获取验证码" />
 
-                <!-- 注册页面 -->
-                <div id="dowebok_register">
-                    <div class="dowebok">
-                        <div class="logo">博主登录</div>
-                        <!-- <hr /> -->
-                        <div class="form_login_reg">
-                            <div class=" login_b">
-                                <b id="x_submit" class="submit" onclick="dowebok_login()">游客登录</b>
-                            </div>
-                            <div class="register_b">
-                                <b id="t_submit" class="submit" onclick="dowebok_register()">博主登录</b>
-                            </div>
-                        </div>
-
-                        <div class="form-item">
-                            <input id="username" type="text" autocomplete="off" placeholder="登录账号">
-                        </div>
-                        <div class="form-item">
-                            <div id="aquire_password">
-                                <input id="password" type="password" autocomplete="off" placeholder="密码">
-                            </div>
-                        </div>
-                        <div class="form-item">
-                            <button id="m_submit" class="submit">登 录</button>
-                        </div>
-                        <div class="cancel">
-                            <img src="../static/images/038-cancel.png" th:src="@{/images/038-cancel.png}" onclick="Hide()" />
                         </div>
                     </div>
+                    <div class="form-item">
+                        <button id="c_submit" class="submit">登 录</button>
+                    </div>
+                    <div class="cancel">
+                        <img src="../static/images/038-cancel.png" th:src="@{/images/038-cancel.png}" onclick="Hide()" />
+                    </div>
                 </div>
-
 
             </div>
 
+            <!-- 注册页面 -->
+            <div id="dowebok_register">
+                <div class="dowebok">
+                    <div class="logo">博主登录</div>
+                    <!-- <hr /> -->
+                    <div class="form_login_reg">
+                        <div class=" login_b">
+                            <b id="x_submit" class="submit" onclick="dowebok_login()">游客登录</b>
+                        </div>
+                        <div class="register_b">
+                            <b id="t_submit" class="submit" onclick="dowebok_register()">博主登录</b>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <input id="username" type="text" autocomplete="off" placeholder="登录账号">
+                    </div>
+                    <div class="form-item">
+                        <div id="aquire_password">
+                            <input id="password" type="password" autocomplete="off" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <button id="m_submit" class="submit">登 录</button>
+                    </div>
+                    <div class="cancel">
+                        <img src="../static/images/038-cancel.png" th:src="@{/images/038-cancel.png}" onclick="Hide()" />
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
+    </div>
 </div>
 
 
@@ -601,17 +333,17 @@
     </div>
 </footer>
 <!--/*/<th:block th:replace="_fragments :: script">/*/--><!--在thymeleaf中这是有效的,不是注释-->
-    <script src="../static/js/jquery-3.4.1.js" th:src="@{/js/jquery-3.4.1.js}"></script>
-    <script src="../static/js/login_logout.js" th:src="@{/js/login_logout.js}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/js/jquery-3.4.1.js" th:src="@{/js/jquery-3.4.1.js}"></script>
+<script src="../static/js/login_logout.js" th:src="@{/js/login_logout.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--/*/</th:block>/*/--><!--在thymeleaf中这是有效的,不是注释-->
 
 <script th:inline="javascript">
 
-   var message = ([[${message}]]);
-   if(message != null){
-       alert([[${message}]]);
-   }
+    var message = ([[${message}]]);
+    if(message != null){
+        alert([[${message}]]);
+    }
 
 
     //消息提示关闭初始化
@@ -675,8 +407,8 @@
             //三种情况年份小，年分相等月份小，年月相等，天数小
             //点击pre和next之后，my_month和my_year会发生变化，将其与现在的直接获取的再进行比较
             //i与my_day进行比较,pre和next变化时，my_day是不变的
-           // console.log(my_year + " " + my_month + " " + my_day);
-           // console.log(my_date.getFullYear() + " " + my_date.getMonth() + " " + my_date.getDay());
+            // console.log(my_year + " " + my_month + " " + my_day);
+            // console.log(my_date.getFullYear() + " " + my_date.getMonth() + " " + my_date.getDay());
             if ((my_year < my_date.getFullYear()) || (my_year == my_date.getFullYear() && my_month < my_date.getMonth()) || (my_year == my_date.getFullYear() && my_month == my_date.getMonth() && i < my_day)) {
                 myclass = " class='lightgrey'";
             } else if (my_year == my_date.getFullYear() && my_month == my_date.getMonth() && i == my_day) {

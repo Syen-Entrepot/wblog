@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
@@ -51,6 +52,19 @@ public class CommentController {
 
         commentService.saveComment(comment);
         return "redirect:/comments/" + blogId;
+    }
+
+    /**
+     * 删除评论
+     * @param commentId
+     * @return
+     */
+
+    @PostMapping("/comment_del")
+    @ResponseBody
+    public String comment_del(Long commentId){
+        commentService.deleteComment(commentId);
+        return "删除成功!";
     }
 
 }

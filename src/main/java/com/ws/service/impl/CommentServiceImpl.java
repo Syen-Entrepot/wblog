@@ -42,6 +42,20 @@ public class CommentServiceImpl implements CommentService {
         comment.setCreateTime(new Date());
         return commentRepository.save(comment);
     }
+    /**
+     * 根据id删除评论
+     * @param id
+     */
+    @Transactional
+    @Override
+    public void deleteComment(Long id) {
+//        Long parentCommentId = comment.getParentComment().getId();//前端默认的-1
+//        if(parentCommentId != -1){
+//            comment.setParentComment(null);
+//            commentRepository.save(comment);
+//        }
+        commentRepository.deleteByParentCommentId(id);
+    }
 
     /**
      * 循环每个顶级的评论点

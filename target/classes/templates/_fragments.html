@@ -28,7 +28,7 @@
             <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i> 分类</a>
             <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i> 标签</a>
             <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i> 归档</a>
-            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于博主</a>
+            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i> 关于我</a>
             </div>
 
         </div>
@@ -65,17 +65,16 @@
                             <b id="l_submit" class="submit" onclick="dowebok_register()">博主登录</b>
                         </div>
                     </div>
-
                     <div class="form-item">
                         <input id="email" type="text" autocomplete="off" placeholder="邮箱">
                     </div>
                     <div class="form-item">
                         <div id="aquire_check">
-                            <input id="check_code" type="text"autocomplete="off" placeholder="验证码">
-                            <input id="check_button" type="button" onclick="settime(this)" value="获取验证码" />
-
+                            <input id="check_code" type="text" autocomplete="off" placeholder="验证码">
+                            <input id="check_button" type="button" onclick="settime(this)" value="获取验证码"/>
                         </div>
                     </div>
+
                     <div class="form-item">
                         <button id="c_submit" class="submit">登 录</button>
                     </div>
@@ -85,7 +84,7 @@
                 </div>
 
             </div>
-            <!-- 登录页面 -->
+            <!-- 博主登录 -->
             <form  method="post" target="_blank" action="#" th:action="@{/admin/login}">
             <div id="dowebok_register">
                 <div class="dowebok">

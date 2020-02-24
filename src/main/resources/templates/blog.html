@@ -461,6 +461,7 @@ h5,h6{font-size:1em;}
                             </a>
                             <div class="content">
                                 <a class="author" >
+                                    第<span th:text="${comment.id}"></span>评论
                                     <span th:text="${comment.email}">Matt</span>
                                     <div class="ui mini basic violet left pointing label m-padded-mini" th:if="${comment.adminComment}">博主</div>
                                 </a>
@@ -482,6 +483,7 @@ h5,h6{font-size:1em;}
                                     </a>
                                     <div class="content">
                                         <a class="author" >
+                                            第<span class="replyId" name="reply.id" th:text="${reply.id}"></span>评论
                                             <span th:text="${reply.email}">小红</span>
                                             <div class="ui mini basic violet left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
                                            &nbsp <span th:text="|@ ${reply.parentComment.email}|" class="violet">@小白</span>
@@ -493,7 +495,8 @@ h5,h6{font-size:1em;}
                                             How artistic!
                                         </div>
                                         <div class="actions">
-                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentemail=${reply.email}" onclick="reply(this)">回复</a>
+                                            <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentemail=${reply.email}" onclick="reply(this)">回复</a>/
+                                            <a id="m_delete">删除</a>
                                         </div>
                                     </div>
                                 </div>
@@ -668,7 +671,6 @@ h5,h6{font-size:1em;}
 <script src="../static/lib/qrcode/qrcode.min.js"></script>
 <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
 <!--/*/</th:block>/*/-->
-<script src="../static/js/login_logout.js" th:src="@{/js/login_logout.js}"></script>
 
 
 <script th:inline="javascript">
@@ -774,7 +776,6 @@ h5,h6{font-size:1em;}
         $("#comment-container").load(/*[[@{/comments}]]*/"",{
             "parentComment.id" : $("[name='parentComment.id']").val(),
             "blog.id" : $("[name='blog.id']").val(),
-            // "nickname": $("[name='nickname']").val(),
             "email"   : $("[name='email']").val(),
             "content" : $("[name='content']").val()
         },function (responseTxt, statusTxt, xhr) {
@@ -786,7 +787,7 @@ h5,h6{font-size:1em;}
     function clearContent() {
         $("[name='content']").val('');
         $("[name='parentComment.id']").val(-1);
-        $("[name='content']").attr("placeholder", "请输入评论信息...哈哈");
+        $("[name='content']").attr("placeholder", "请输入评论信息...");
     }
 
 
@@ -797,6 +798,21 @@ h5,h6{font-size:1em;}
         $("[name='parentComment.id']").val(commentId);
         $(window).scrollTo($('#comment-form'),500);
     }
+
+    $('#m_delete').click(function () {
+        alert("reply")
+        var commentId = $('.replyId').val();
+        $.ajax({
+            url:'/comment_del',
+            method:'post',
+            data:{"commentId":commentId},
+            dataType:'json',
+            success: function(data) {
+                console.log(data);
+            }
+        });
+        
+    });
 
 </script>
 </body>

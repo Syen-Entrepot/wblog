@@ -44,6 +44,7 @@ public class EmailController {
     private Date LAST_TIME;
 
 
+
 //    @GetMapping("/email")
 ////    public String index(){
 ////        return "login_logout";
@@ -65,18 +66,19 @@ public class EmailController {
         }
         return checkCode;
     }
+
     /**
      * 验证码校验
      */
     @PostMapping("/CheckEmailCode")
     public String CheckEmailCode(@PageableDefault(size = 8,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable,
                                  Model model, String code, HttpSession httpSession) {
-        model.addAttribute("page",blogService.listBlog(pageable));
-        model.addAttribute("types",typeService.listTypeTop(6));
-        model.addAttribute("tags",tagService.listTagTop(10));
-        model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(8));
         LAST_TIME = new Date();
         if(((LAST_TIME.getTime() - CURRENT_TIME.getTime()) /1000 ) <= 40){
+            model.addAttribute("page",blogService.listBlog(pageable));
+            model.addAttribute("types",typeService.listTypeTop(6));
+            model.addAttribute("tags",tagService.listTagTop(10));
+            model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(8));
             if(code != null){
                 if (code.equals(checkCode)) {
                     httpSession.setAttribute("email", clientEmail);
@@ -100,9 +102,8 @@ public class EmailController {
             return "index";
         }
 
-
-
     }
+
     /**
      * 游客退出登录
      */
@@ -118,6 +119,4 @@ public class EmailController {
         httpSession.removeAttribute("show");
         return "index";
     }
-
-
 }
