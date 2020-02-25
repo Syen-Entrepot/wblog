@@ -39,7 +39,7 @@
 </nav>
 
 <!--中间内容-->
-<div id="waypoint" class="m-container-small m-padded-tb-big animated rubberBand ">
+<div id="waypoint" class="m-container-small entry-content m-padded-tb-big animated rubberBand ">
     <div class="ui m-container">
         <div class="ui top attached segment">
             <div class="ui horizontal link list">
@@ -56,8 +56,8 @@
             </div>
         </div>
         <!--<div class="ui attached segment">-->
-            <!--&lt;!&ndash;图片区域&ndash;&gt;-->
-            <!--<img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded fluid image">-->
+        <!--&lt;!&ndash;图片区域&ndash;&gt;-->
+        <!--<img src="https://unsplash.it/800/450?image=1004" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded fluid image">-->
         <!--</div>-->
         <div class="ui attached padded segment">
             <!--内容-->
@@ -486,7 +486,7 @@ h5,h6{font-size:1em;}
                                             第<span class="replyId" name="reply.id" th:text="${reply.id}"></span>评论
                                             <span th:text="${reply.email}">小红</span>
                                             <div class="ui mini basic violet left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
-                                           &nbsp <span th:text="|@ ${reply.parentComment.email}|" class="violet">@小白</span>
+                                            &nbsp <span th:text="|@ ${reply.parentComment.email}|" class="violet">@小白</span>
                                         </a>
                                         <div class="metadata">
                                             <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
@@ -586,12 +586,10 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 </div>
-
-<div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display: none">
+<div class="toc"></div>
+<div id="toolbar" class="m-padded m-fixed comment_toTop m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons ">
-        <button type="button" class="ui toc teal button" >目录</button>
         <a href="#comment-container" class="ui teal button" >留言</a>
-        <button class="ui wechat icon button"><i class="weixin icon"></i></button>
         <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
     </div>
 </div>
@@ -671,7 +669,35 @@ h5,h6{font-size:1em;}
 <script src="../static/lib/qrcode/qrcode.min.js"></script>
 <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
 <!--/*/</th:block>/*/-->
+<style>
+    .toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 350px) / 2);
+        position: fixed !important;
+        top:180px;
+        position: absolute;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .comment_toTop {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 450px) / 2);
+        position: fixed !important;
+        top:580px;
+        position: absolute;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
+</style>
 
 <script th:inline="javascript">
 
@@ -685,20 +711,20 @@ h5,h6{font-size:1em;}
         position: 'bottom center'
     });
 
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.js-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.js-toc-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-    });
+    // tocbot.init({
+    //     // Where to render the table of contents.
+    //     tocSelector: '.js-toc',
+    //     // Where to grab the headings to build the table of contents.
+    //     contentSelector: '.js-toc-content',
+    //     // Which headings to grab inside of the contentSelector element.
+    //     headingSelector: 'h1, h2, h3',
+    // });
 
-    $('.toc.button').popup({
-        popup : $('.toc-container.popup'),
-        on : 'click',
-        position: 'left center'
-    });
+    // $('.toc.button').popup({
+    //     popup : $('.toc-container.popup'),
+    //     on : 'click',
+    //     position: 'left center'
+    // });
 
     $('.wechat').popup({
         popup : $('.wechat-qr'),
@@ -732,6 +758,56 @@ h5,h6{font-size:1em;}
             console.log('Scrolled to waypoint!  ' + direction);
         }
     })
+    //目录
+    function mashiroToc(mashiro) {
+        // 滚动及悬浮
+        $(document).ready(function() {
+            if ($("div").hasClass("toc")) {
+                var $elm = $('.toc');
+                var iniTop = 500;
+                var finTop = 100;
+                var hasScrolled = $('.site-header').offset().top;
+                if (hasScrolled > iniTop) {
+                    $elm.css({
+                        'top': finTop
+                    });
+                }
+                $(window).scroll(function() {
+                    var p = $(window).scrollTop();
+                    if (p > iniTop - finTop) {
+                        $elm.css({
+                            'top': finTop
+                        });
+                    } else {
+                        $elm.css({
+                            'top': iniTop - p
+                        });
+                    }
+                });
+            }
+        });
+        // 初始化
+        if (mashiro) {
+            var id = 1;
+            $(".entry-content").children("h1,h2,h3,h4,h5").each(function() {
+                //var hyphenated = $(this).text().replace(/\s/g, '-');
+                var hyphenated = "mashiro-" + id;
+                $(this).attr('id', hyphenated);
+                id++;
+            });
+            // 初始化 tocbot.js
+            tocbot.init({
+                tocSelector: '.toc',
+                contentSelector: '.entry-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                positionFixedSelector: ".toc",
+                scrollEndCallback: function (e) {
+                    window.scrollTo(window.scrollX, window.scrollY - 80);
+                },
+            });
+        }
+    }
+    mashiroToc(true);
 
 
     //评论表单验证
@@ -811,7 +887,7 @@ h5,h6{font-size:1em;}
                 console.log(data);
             }
         });
-        
+
     });
 
 </script>

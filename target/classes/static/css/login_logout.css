@@ -371,10 +371,15 @@ body {
 }
 
 
-#denglu{
-    color: red;
+#login_btn {
+    width: 70px;
+    height: 70px;
+    line-height: 50px;
+    border: 1px #00C5CD solid;
+    box-shadow: 0 0 15px #00C5CD;
+    background-color: #00C5CD;
+    border-radius: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Adobe 仿宋 Std R";
 }
-
-/* #modal p {
-    margin-left: 80px;
-} */

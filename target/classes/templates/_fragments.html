@@ -38,10 +38,10 @@
     </a>
 </nav>
 
-<div th:fragment="login_logout_button" class="m-fixed m-right-center">
-    <button >
+<div th:fragment="login_logout_button" class="m-fixed m-left-center">
+    <button id="login_btn">
         <span id="denglu"  class="show" th:class="${session.hide}" onclick="Show();">登录</span>
-        <span id="show_hide" class="hide" th:class="${session.show}"  th:text="${session.email}">登录</span>
+        <span id="show_hide" class="hide" th:class="${session.show}"  th:text="${session.email}">退出</span>
     </button>
 </div>
 
@@ -79,7 +79,7 @@
                         <button id="c_submit" class="submit">登 录</button>
                     </div>
                     <div class="cancel">
-                        <img src="../static/images/取消.png" th:src="@{/images/取消.png}" onclick="Hide()" />
+                        <img src="../static/images/038-cancel.png" th:src="@{/images/038-cancel.png}" onclick="Hide()" />
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui round image" alt="" style="width: 110px">
+                        <img src="../static/images/sun.png" th:src="@{/images/sun.png}" class="ui round image" alt="" style="width: 110px">
                     </div>
                 </div>
 

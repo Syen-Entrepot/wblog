@@ -2,6 +2,11 @@
 body{
     background: url("../images/white-waves.png");
 }
+
+.m-font{
+    text-align: center !important;
+}
+
 .m-padded-mini{
     padding: 0.2em !important;
 }
