@@ -13,7 +13,7 @@
 <nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui teal header item">后台管理</h2>
+            <h2 class="ui violet header item">后台管理</h2>
             <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i> 博客</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i> 分类</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i> 标签</a>
@@ -44,7 +44,7 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" th:href="@{/admin/blogs/input}" class="item">发布</a>
-            <a href="#" th:href="@{/admin/blogs}" class="active teal item">列表</a>
+            <a href="#" th:href="@{/admin/blogs}" class="active violet item">列表</a>
         </div>
     </div>
 </div>
@@ -83,7 +83,7 @@
                      </div>
                  </div>
                  <div class="field">
-                     <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+                     <button type="button" id="search-btn" class="ui mini violet basic button"><i class="search icon"></i>搜索</button>
                  </div>
                  </div>
          </div>
@@ -112,7 +112,7 @@
                      <th th:text="${blog.polished} ? '发布' : '草稿' ">草稿</th>
                      <th th:text="${blog.updateTime}">2019-08-15 09:35</th>
                      <th>
-                         <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
+                         <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini violet basic button">编辑</a>
                          <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">删除</a>
                      </th>
                  </tr>
@@ -124,7 +124,7 @@
                              <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
                              <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">下一页</a>
                          </div>
-                         <a href="#" th:href="@{/admin/blogs/input}" class="ui right floated mini teal basic button">新增</a>
+                         <a href="#" th:href="@{/admin/blogs/input}" class="ui right floated mini violet basic button">新增</a>
                      </th>
                  </tr>
                  </tfoot>

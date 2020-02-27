@@ -50,6 +50,7 @@ public class LoginController {
                         RedirectAttributes attributes,
                         Model model,
                         BlogQuery blogQuery,
+                        HttpSession httpSession,
                         @PageableDefault(size = 3,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable){
         User user = userService.checkUser(username,password);
         if(user != null){
@@ -58,6 +59,8 @@ public class LoginController {
             session.setAttribute("email",user.getEmail());
             model.addAttribute("types",typeService.ListType());
             model.addAttribute("page",blogService.listBlog(pageable,blogQuery));
+            httpSession.setAttribute("hide","hide");
+            httpSession.setAttribute("show","show");
             return "admin/blogs";
         }else {
             //重定向拿不到model或modelAndView里面的值，要用RedirectAttributes

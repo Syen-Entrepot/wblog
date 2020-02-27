@@ -44,7 +44,7 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" th:href="@{/admin/types/input}" class="item">新增</a>
-            <a href="#" th:href="@{/admin/types}" class="active teal item">列表</a>
+            <a href="#" th:href="@{/admin/types}" class="active violet item">列表</a>
         </div>
     </div>
 </div>
@@ -71,7 +71,7 @@
                         <th th:text="${iterStat.count}">1</th>
                         <th th:text="${type.name}">万有引力</th>
                         <th>
-                            <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}" class="ui mini violet basic button">编辑</a>
                             <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}" class="ui mini red basic button">删除</a>
                         </th>
                     </tr>
@@ -83,7 +83,7 @@
                                 <a th:href="@{/admin/types(page=${page.number}-1)}" class="item" th:unless="${page.first}">上一页</a>
                                 <a th:href="@{/admin/types(page=${page.number}+1)}" class="item" th:unless="${page.last}">下一页</a>
                             </div>
-                            <a href="#" th:href="@{/admin/types/input}" class="ui right floated mini teal basic button">新增</a>
+                            <a href="#" th:href="@{/admin/types/input}" class="ui right floated mini violet basic button">新增</a>
                         </th>
                     </tr>
                 </tfoot>

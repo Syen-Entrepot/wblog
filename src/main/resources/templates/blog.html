@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
     <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
     <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
-
+    <link rel="stylesheet" href="../static/css/login_logout.css" th:href="@{/css/login_logout.css}">
 </head>
 <body>
 
@@ -589,7 +589,7 @@ h5,h6{font-size:1em;}
 <div class="toc"></div>
 <div id="toolbar" class="m-padded m-fixed comment_toTop m-right-bottom" style="display: none">
     <div class="ui vertical icon buttons ">
-        <a href="#comment-container" class="ui teal button" >留言</a>
+        <a href="#comment-container" class="ui violet button" >留言</a>
         <div id="toTop-button" class="ui icon button" ><i class="chevron up icon"></i></div>
     </div>
 </div>
@@ -609,22 +609,22 @@ h5,h6{font-size:1em;}
 <br>
 <br>
 
+<button id="m_quit" class=" m-left-center" onclick="show_confirm()">退出</button>
+<!--<div th:replace="_fragments :: login_logout_button" class="m-fixed m-left-center">-->
+    <!--<button >-->
+        <!--<span id="denglu"  class="show" th:class="${session.hide}" onclick="Show();">登录</span>-->
+        <!--<span id="show_hide" class="hide" th:class="${session.show}"  th:text="${session.email}">登录</span>-->
+    <!--</button>-->
+<!--</div>-->
 
-<div th:replace="_fragments :: login_logout_button" class="m-fixed m-left-center">
-    <button >
-        <span id="denglu"  class="show" th:class="${session.hide}" onclick="Show();">登录</span>
-        <span id="show_hide" class="hide" th:class="${session.show}"  th:text="${session.email}">登录</span>
-    </button>
-</div>
+<!--<div th:replace="_fragments :: login_logout">-->
 
-<div th:replace="_fragments :: login_logout">
-
-</div>
+<!--</div>-->
 
 
 
 <!--底部footer-->
-<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-big">
     <div class="ui center aligned container">
         <div class="ui inverted divided stackable grid">
             <div class="three wide column">
@@ -874,7 +874,7 @@ h5,h6{font-size:1em;}
         $("[name='parentComment.id']").val(commentId);
         $(window).scrollTo($('#comment-form'),500);
     }
-
+//删除评论
     $('#m_delete').click(function () {
         alert("reply")
         var commentId = $('.replyId').val();
@@ -889,7 +889,6 @@ h5,h6{font-size:1em;}
         });
 
     });
-
 </script>
 </body>
 </html>

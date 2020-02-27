@@ -193,10 +193,9 @@
 </div>
 <br>
 <br>
-
 <div th:replace="_fragments :: login_logout_button" class="m-fixed m-left-center">
-    <button >
-        <span id="denglu"  class="show" th:class="${session.hide}" onclick="Show();">登录</span>
+    <button id="login_btn" onclick="Show()">
+        <span id="denglu"  class="show" th:class="${session.hide}">登录</span>
         <span id="show_hide" class="hide" th:class="${session.show}"  th:text="${session.email}">登录</span>
     </button>
 </div>
@@ -328,8 +327,9 @@
 
     var message = ([[${message}]]);
     if(message != null){
-        alert([[${message}]]);
+        alert(message);
     }
+
 
 
     //消息提示关闭初始化
@@ -430,6 +430,20 @@
         }
         refreshDate();
     }
+
+    //根据session切换onclick的值
+    $(document).ready(function() {
+        var temail = ([[${session.email}]]);
+        if(temail != null){
+            $('#login_btn').attr('onclick','').bind("click", function() {
+                show_confirm();
+            })
+        } else {
+            $('#login_btn').attr('onclick', '').bind("click", function() {
+                Show();
+            })
+        }
+    })
 
 
 
