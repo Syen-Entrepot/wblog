@@ -73,6 +73,12 @@ public class CommentServiceImpl implements CommentService {
         combineChildren(commentsView);
         return commentsView;
     }
+
+    @Override
+    public void setCommentPrant_comment_id(Long id) {
+        commentRepository.setCommentPrant_comment_id(id);
+    }
+
     private void combineChildren(List<Comment> comments){
         for(Comment comment : comments){
             List<Comment> reply = comment.getReplayComments();

@@ -14,5 +14,6 @@ public interface CommentService {
 
     Comment saveComment(Comment comment);
 
+    void setCommentPrant_comment_id(Long id);
     void deleteComment(Long id);
 }

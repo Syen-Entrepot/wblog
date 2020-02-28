@@ -70,10 +70,10 @@ var emailRegex = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
     //    退出功能
     function show_confirm()
     {
-        var r=confirm("Press a button!");
+        var r=confirm("确定退出吗!");
         if (r==true)
         {
-            alert("You pressed OK!");
+            //alert("You pressed OK!");
             $.ajax({
                 url:'logout',
                 method:'get',
@@ -86,7 +86,7 @@ var emailRegex = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
         }
         else
         {
-            alert("You pressed Cancel!");
+            //alert("You pressed Cancel!");
             var t = document.getElementById('m_quit');
             t.className = " ";
             document.getElementById('m_quit').classList.add('hide');
