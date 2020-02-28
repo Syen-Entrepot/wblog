@@ -851,8 +851,8 @@ h5,h6{font-size:1em;}
      var delete_button = function(obj) {
          var commentId = $(obj).data('commentid');
          var commentEmail = $(obj).data('commentemail');
-         var quit = confirm("确定删除吗?");
-            alert(quit);
+         // var quit = confirm("确定删除吗?");
+         //    alert(quit);
 
          $("#comment-container").load(/*[[@{/comment_del}]]*/"",{
              "id" : commentId,
@@ -860,6 +860,11 @@ h5,h6{font-size:1em;}
              "email" : commentEmail
          })
       }
+
+    var delmessage = ([[${delmessage}]]);
+    if(delmessage != null){
+        alert(delmessage);
+    }
 
 </script>
 </body>

@@ -22,4 +22,10 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByUsernameAndPassword(username,MD5Utils.code(password));
         return user;
     }
+
+    @Override
+    public String checkUserEmail(String username) {
+        String user = userRepository.checkUserEmail(username);
+        return user;
+    }
 }
