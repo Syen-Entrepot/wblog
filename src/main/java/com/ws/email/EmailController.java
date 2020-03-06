@@ -64,7 +64,7 @@ public class EmailController {
             //e.printStackTrace();
             return bb;
         }
-        return checkCode;
+        return "登录验证码已发送";
     }
 
     /**
