@@ -73,6 +73,7 @@ public class LoginController {
     //退出
     @GetMapping("/logout")
     public String logout(HttpSession session){
+        session.setAttribute("hide","show");
         session.removeAttribute("user");//清空session
         session.removeAttribute("email");
         return "redirect:/";
