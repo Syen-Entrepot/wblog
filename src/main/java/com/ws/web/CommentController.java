@@ -72,30 +72,32 @@ public class CommentController {
         Long blogId = comment.getBlog().getId();
         String commentEmail = comment.getEmail();
         String adminEmail = userService.checkUserEmail(admin_username);
-        if(commentEmail.equals(adminEmail)){
-            commentService.setCommentPrant_comment_id(commentId);
-            try{
-                Thread.sleep(1000);
-                commentService.deleteComment(commentId);
-            }catch (Exception e){
-                attributes.addFlashAttribute("delmessage","删除失败");
-                return "redirect:/comments/" + blogId;
+            if(adminEmail.equals(session.getAttribute("email"))){
+                commentService.setCommentPrant_comment_id(commentId);
+                try{
+                    Thread.sleep(1000);
+                    commentService.deleteComment(commentId);
+                }catch (Exception e){
+                    attributes.addFlashAttribute("delmessage","删除失败");
+                    return "redirect:/comments/" + blogId;
+                }
+            }else{
+                if(commentEmail.equals(session.getAttribute("email"))){
+                    commentService.setCommentPrant_comment_id(commentId);
+                    try{
+                        Thread.sleep(1000);
+                        commentService.deleteComment(commentId);
+                    }catch (Exception e){
+                        attributes.addFlashAttribute("delmessage","删除失败");
+                        return "redirect:/comments/" + blogId;
+                    }
+                }else {
+                    attributes.addFlashAttribute("delmessage","你没有权限");
+                    return "redirect:/comments/" + blogId;
+                }
             }
-        }else{
-            if(commentEmail.equals(session.getAttribute("email"))){
-                 commentService.setCommentPrant_comment_id(commentId);
-             try{
-                 Thread.sleep(1000);
-                 commentService.deleteComment(commentId);
-                 }catch (Exception e){
-                 attributes.addFlashAttribute("delmessage","删除失败");
-                       return "redirect:/comments/" + blogId;
-                 }
-            }else {
-                attributes.addFlashAttribute("delmessage","你没有权限");
-            return "redirect:/comments/" + blogId;
-            }
-        }
+
+
         return "redirect:/comments/" + blogId;
     }
 

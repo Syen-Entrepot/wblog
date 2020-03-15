@@ -24,6 +24,6 @@ public interface CommentRepository extends JpaRepository<Comment,Long> {
 
     @Transactional//更新加上事务
     @Modifying//更新数据加这个注解
-    @Query("UPDATE Comment set parent_comment_id = null where id=?1")
+    @Query("UPDATE Comment set parent_comment_id = null where parent_comment_id=?1")
     void setCommentPrant_comment_id(Long id);
 }
