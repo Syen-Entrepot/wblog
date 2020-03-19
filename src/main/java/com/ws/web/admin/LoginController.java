@@ -39,7 +39,7 @@ public class LoginController {
     @GetMapping
     public String loginPage(){
 
-        return "admin/login";
+        return "redirect:/";
     }
 
     //登录
