@@ -35,8 +35,6 @@ public class CommentController {
     @Value("${comment.avatar}")
     private String avatar;
 
-    private static String admin_username = "syen";
-
     @GetMapping("/comments/{blogId}")
     public String comments(@PathVariable Long blogId, Model model){
         model.addAttribute("comments",commentService.listCommentByBlogId(blogId));
@@ -71,7 +69,11 @@ public class CommentController {
         Long commentId = comment.getId();
         Long blogId = comment.getBlog().getId();
         String commentEmail = comment.getEmail();
-        String adminEmail = userService.checkUserEmail(admin_username);
+        String t = (String) session.getAttribute("email");
+        String adminEmail = userService.checkUserEmail(t);
+        if(adminEmail==null){
+            adminEmail="haha";
+        }
             if(adminEmail.equals(session.getAttribute("email"))){
                 commentService.setCommentPrant_comment_id(commentId);
                 try{

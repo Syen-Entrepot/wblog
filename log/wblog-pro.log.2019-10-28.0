@@ -1,0 +1,4 @@
+2019-10-28 12:28:42.349  INFO 12796 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 12796 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2019-10-28 12:28:42.351  INFO 12796 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: pro
+2019-10-28 12:28:44.693  WARN 12796 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-28 12:28:44.894  INFO 12796 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 2.938 seconds (JVM running for 3.585)

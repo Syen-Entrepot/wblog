@@ -73,7 +73,7 @@ public class CommentServiceImpl implements CommentService {
         combineChildren(commentsView);
         return commentsView;
     }
-
+    @Transactional
     @Override
     public void setCommentPrant_comment_id(Long id) {
         commentRepository.setCommentPrant_comment_id(id);
