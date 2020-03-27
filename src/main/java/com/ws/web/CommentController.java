@@ -80,7 +80,7 @@ public class CommentController {
                     Thread.sleep(1000);
                     commentService.deleteComment(commentId);
                 }catch (Exception e){
-                    attributes.addFlashAttribute("delmessage","删除失败");
+                    //attributes.addFlashAttribute("delmessage","删除失败");
                     return "redirect:/comments/" + blogId;
                 }
             }else{
@@ -90,11 +90,11 @@ public class CommentController {
                         Thread.sleep(1000);
                         commentService.deleteComment(commentId);
                     }catch (Exception e){
-                        attributes.addFlashAttribute("delmessage","删除失败");
+                       // attributes.addFlashAttribute("delmessage","删除失败");
                         return "redirect:/comments/" + blogId;
                     }
                 }else {
-                    attributes.addFlashAttribute("delmessage","你没有权限");
+                   // attributes.addFlashAttribute("delmessage","你没有权限");
                     return "redirect:/comments/" + blogId;
                 }
             }

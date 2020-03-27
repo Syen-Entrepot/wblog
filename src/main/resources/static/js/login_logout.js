@@ -93,6 +93,7 @@ var emailRegex = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
         }
     }
 
+    //倒计时
     var countdown=60;
     function settime(obj) {
         if (countdown == 0) {
@@ -125,6 +126,15 @@ var emailRegex = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
         b.className = " ";
         var b1 = document.getElementById('dowebok_register');
         b1.className = " ";
+        //重置时间
+        // var t =document.getElementById('check_button');add
+        // t.removeAttribute("disabled");
+        // countdown = 0;
+        // t.value = "获取验证码";
+        reset();
+    }
+
+    function reset() {
         //重置时间
         var t =document.getElementById('check_button');
         t.removeAttribute("disabled");
