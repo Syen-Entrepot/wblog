@@ -23,9 +23,6 @@ public class Blog {
 
     private String flag;
     private Integer views;
-   /* private boolean appreciation;
-    private boolean shareStatement;
-    private boolean commentabled;*/
     private boolean polished;
     private boolean recommend;
     @Temporal(TemporalType.TIMESTAMP)
@@ -94,30 +91,6 @@ public class Blog {
         this.views = views;
     }
 
-   /* public boolean isAppreciation() {
-        return appreciation;
-    }
-
-    public void setAppreciation(boolean appreciation) {
-        this.appreciation = appreciation;
-    }
-
-    public boolean isShareStatement() {
-        return shareStatement;
-    }
-
-    public void setShareStatement(boolean shareStatement) {
-        this.shareStatement = shareStatement;
-    }
-
-    public boolean isCommentabled() {
-        return commentabled;
-    }
-
-    public void setCommentabled(boolean commentabled) {
-        this.commentabled = commentabled;
-    }
-*/
     public boolean isPolished() {
         return polished;
     }
@@ -229,9 +202,6 @@ public class Blog {
                 ", content='" + content + '\'' +
                 ", flag='" + flag + '\'' +
                 ", views=" + views +
-               /* ", appreciation=" + appreciation +
-                ", shareStatement=" + shareStatement +
-                ", commentabled=" + commentabled +*/
                 ", polished=" + polished +
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
