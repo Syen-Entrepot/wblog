@@ -1,0 +1,483 @@
+2020-05-06 03:51:22.456  INFO 12172 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 12172 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2020-05-06 03:51:22.490 DEBUG 12172 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2020-05-06 03:51:22.490  INFO 12172 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2020-05-06 03:51:22.711  INFO 12172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-06 03:51:22.711  INFO 12172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-06 03:51:24.283  INFO 12172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-06 03:51:24.384  INFO 12172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 5 repository interfaces.
+2020-05-06 03:51:24.953  INFO 12172 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8db90bbc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 03:51:25.707  INFO 12172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-06 03:51:25.794  INFO 12172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 03:51:25.794  INFO 12172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-06 03:51:25.977  INFO 12172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-06 03:51:25.977  INFO 12172 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3265 ms
+2020-05-06 03:51:26.308  INFO 12172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-06 03:51:26.510  INFO 12172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-06 03:51:26.605  INFO 12172 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-06 03:51:26.713  INFO 12172 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-06 03:51:26.714  INFO 12172 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-06 03:51:26.976  INFO 12172 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-06 03:51:27.354  INFO 12172 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-06 03:51:28.339  INFO 12172 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-06 03:51:28.450  INFO 12172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 03:51:28.928  INFO 12172 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-06 03:51:29.833  INFO 12172 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 03:51:29.886  WARN 12172 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-06 03:51:29.939  INFO 12172 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-06 03:51:30.538  INFO 12172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-06 03:51:30.540  INFO 12172 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 9.367 seconds (JVM running for 12.918)
+2020-05-06 03:51:37.756  INFO 12172 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 03:51:37.757  INFO 12172 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-06 03:51:37.771  INFO 12172 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-05-06 03:51:37.876  INFO 12172 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 03:51:38.025  WARN 12172 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 03:51:38.042  WARN 12172 --- [http-nio-8080-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 03:51:38.053  INFO 12172 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 03:51:39.156  INFO 12172 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:51:39.164  INFO 12172 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:51:52.632  INFO 12172 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-05-06 03:51:52.726  INFO 12172 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : type
+2020-05-06 03:51:53.194  INFO 12172 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:51:53.202  INFO 12172 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:51:55.655  INFO 12172 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.ws.web.ArchiveShowController.archive', args=[{}]}
+2020-05-06 03:51:55.686  INFO 12172 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : archives
+2020-05-06 03:51:56.155  INFO 12172 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:51:56.162  INFO 12172 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:51:58.500  INFO 12172 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 03:51:58.523  INFO 12172 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 03:51:58.966  INFO 12172 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:51:58.977  INFO 12172 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:52:14.953  INFO 12172 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 03:52:14.977  INFO 12172 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 03:52:15.500  INFO 12172 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:52:15.507  INFO 12172 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:52:53.923  INFO 12172 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 03:52:53.950  INFO 12172 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 03:52:54.429  INFO 12172 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:52:54.436  INFO 12172 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:52:59.009  INFO 12172 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.ws.web.ArchiveShowController.archive', args=[{}]}
+2020-05-06 03:52:59.030  INFO 12172 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : archives
+2020-05-06 03:52:59.414  INFO 12172 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:52:59.422  INFO 12172 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:56:09.437  INFO 11552 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 11552 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2020-05-06 03:56:09.439 DEBUG 11552 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2020-05-06 03:56:09.439  INFO 11552 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2020-05-06 03:56:09.616  INFO 11552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-06 03:56:09.616  INFO 11552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-06 03:56:10.274  INFO 11552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-06 03:56:10.365  INFO 11552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 5 repository interfaces.
+2020-05-06 03:56:10.699  INFO 11552 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$823e6a7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 03:56:11.285  INFO 11552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-06 03:56:11.320  INFO 11552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 03:56:11.321  INFO 11552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-06 03:56:11.498  INFO 11552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-06 03:56:11.499  INFO 11552 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1883 ms
+2020-05-06 03:56:11.670  INFO 11552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-06 03:56:11.784  INFO 11552 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-06 03:56:11.823  INFO 11552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-06 03:56:11.873  INFO 11552 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-06 03:56:11.874  INFO 11552 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-06 03:56:11.972  INFO 11552 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-06 03:56:12.098  INFO 11552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-06 03:56:12.735  INFO 11552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-06 03:56:12.788  INFO 11552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 03:56:13.052  INFO 11552 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-06 03:56:13.759  INFO 11552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 03:56:13.802  WARN 11552 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-06 03:56:13.849  INFO 11552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-06 03:56:14.332  INFO 11552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-06 03:56:14.334  INFO 11552 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.459 seconds (JVM running for 6.516)
+2020-05-06 03:56:34.803  INFO 11552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 03:56:34.804  INFO 11552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-06 03:56:34.820  INFO 11552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-05-06 03:56:34.852  INFO 11552 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 03:56:34.932  WARN 11552 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 03:56:34.940  WARN 11552 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 03:56:34.948  INFO 11552 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 03:56:35.799  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:56:35.809  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:57:47.584  INFO 11552 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-05-06 03:57:47.625  INFO 11552 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : type
+2020-05-06 03:57:48.145  INFO 11552 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:57:48.152  INFO 11552 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:58:31.496  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.ws.web.TagShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-05-06 03:58:31.528  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : tags
+2020-05-06 03:58:32.068  INFO 11552 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:58:32.078  INFO 11552 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:59:07.959  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.ws.web.ArchiveShowController.archive', args=[{}]}
+2020-05-06 03:59:07.994  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : archives
+2020-05-06 03:59:08.451  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:59:08.461  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 03:59:45.428  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/about', ip='127.0.0.1', classMethod='com.ws.web.AboutShowController.about', args=[]}
+2020-05-06 03:59:45.430  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : about
+2020-05-06 03:59:45.936  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 03:59:45.945  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:00:29.951  INFO 11552 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:00:29.978  INFO 11552 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:00:30.458  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:00:30.465  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:00:49.953  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:00:49.975  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:00:50.351  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:00:50.358  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:05:57.119  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/5', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[5, {}]}
+2020-05-06 04:05:57.228  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:05:57.711  INFO 11552 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:05:57.718  INFO 11552 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:05:57.963  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/5', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[5, {}]}
+2020-05-06 04:05:58.001  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:06:10.991  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/2', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[2, {}]}
+2020-05-06 04:06:11.053  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:06:11.567  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:06:11.574  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:06:11.725  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/2', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2020-05-06 04:06:11.728  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:06:22.454  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 1, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:06:22.471  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:06:22.835  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:06:22.847  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:06:26.118  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/4', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[4, {}]}
+2020-05-06 04:06:26.179  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:06:26.612  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:06:26.617  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:06:26.698  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/4', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[4, {}]}
+2020-05-06 04:06:26.713  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:06:43.634  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:06:43.658  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:06:44.137  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:06:44.143  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:06:52.702  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/5', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[5, {}]}
+2020-05-06 04:06:52.762  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:06:53.205  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:06:53.210  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:06:53.358  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/5', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[5, {}]}
+2020-05-06 04:06:53.370  INFO 11552 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:07:03.386  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/7', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[7, {}]}
+2020-05-06 04:07:03.465  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:07:03.893  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:07:03.899  INFO 11552 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:07:04.029  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/7', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[7, {}]}
+2020-05-06 04:07:04.060  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:07:10.862  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/6', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[6, {}]}
+2020-05-06 04:07:10.921  INFO 11552 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:07:11.359  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:07:11.365  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:07:11.502  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/6', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[6, {}]}
+2020-05-06 04:07:11.530  INFO 11552 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:07:46.514  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/2', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[2, {}]}
+2020-05-06 04:07:46.812  INFO 11552 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:07:47.260  INFO 11552 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:07:47.266  INFO 11552 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:07:47.415  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/2', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[2, {}]}
+2020-05-06 04:07:47.417  INFO 11552 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:14:13.783  INFO 5392 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 5392 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2020-05-06 04:14:13.786 DEBUG 5392 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2020-05-06 04:14:13.786  INFO 5392 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2020-05-06 04:14:13.867  INFO 5392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-06 04:14:13.867  INFO 5392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-06 04:14:14.699  INFO 5392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-06 04:14:14.816  INFO 5392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109ms. Found 5 repository interfaces.
+2020-05-06 04:14:15.211  INFO 5392 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9e1a6ce5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 04:14:15.657  INFO 5392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-06 04:14:15.694  INFO 5392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 04:14:15.694  INFO 5392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-06 04:14:15.849  INFO 5392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-06 04:14:15.850  INFO 5392 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1983 ms
+2020-05-06 04:14:16.027  INFO 5392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-06 04:14:16.116  INFO 5392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-06 04:14:16.155  INFO 5392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-06 04:14:16.203  INFO 5392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-06 04:14:16.204  INFO 5392 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-06 04:14:16.335  INFO 5392 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-06 04:14:16.463  INFO 5392 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-06 04:14:17.110  INFO 5392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-06 04:14:17.170  INFO 5392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 04:14:17.463  INFO 5392 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-06 04:14:18.131  INFO 5392 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 04:14:18.175  WARN 5392 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-06 04:14:18.228  INFO 5392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-06 04:14:18.739  INFO 5392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-06 04:14:18.741  INFO 5392 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.682 seconds (JVM running for 7.208)
+2020-05-06 04:14:31.857  INFO 5392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 04:14:31.857  INFO 5392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-06 04:14:31.871  INFO 5392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-05-06 04:14:31.900  INFO 5392 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:14:31.970  WARN 5392 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 04:14:31.979  WARN 5392 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 04:14:31.985  INFO 5392 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:14:32.871  INFO 5392 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:14:32.880  INFO 5392 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:14:48.954  INFO 5392 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:14:48.981  INFO 5392 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:14:49.369  INFO 5392 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:14:49.376  INFO 5392 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:20:02.811  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:20:02.833  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:20:03.250  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:20:03.259  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:20:06.065  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[11, {}]}
+2020-05-06 04:20:06.156  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:20:06.576  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:20:06.583  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:20:06.831  INFO 5392 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:20:06.862  INFO 5392 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:20:30.495  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.ws.web.CommentController.post', args=[Comment{id=null, email='2360808307@qq.com', content='很不错？', avatar='null', createTime=null, blog=Blog{id=11, title='null', content='null', flag='null', views=null, polished=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replayComments=[], parentComment=Comment{id=-1, email='null', content='null', avatar='null', createTime=null, blog=null, replayComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@6e3a998b]}
+2020-05-06 04:20:30.555  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : redirect:/comments/11
+2020-05-06 04:20:30.561  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:20:30.567  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:20:50.988  INFO 5392 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.ws.web.CommentController.post', args=[Comment{id=null, email='2360808307@qq.com', content='太有数学天赋了', avatar='null', createTime=null, blog=Blog{id=11, title='null', content='null', flag='null', views=null, polished=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replayComments=[], parentComment=Comment{id=-1, email='null', content='null', avatar='null', createTime=null, blog=null, replayComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@6e3a998b]}
+2020-05-06 04:20:51.047  INFO 5392 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : redirect:/comments/11
+2020-05-06 04:20:51.053  INFO 5392 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:20:51.061  INFO 5392 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:20:56.973  INFO 5392 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:20:56.998  INFO 5392 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:20:57.376  INFO 5392 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:20:57.385  INFO 5392 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:21:03.633  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:21:03.657  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:21:04.087  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:21:04.097  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:21:05.259  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[11, {}]}
+2020-05-06 04:21:05.314  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:21:05.705  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:21:05.715  INFO 5392 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:21:05.871  INFO 5392 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:21:05.883  INFO 5392 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:22:12.056  INFO 5392 --- [http-nio-8080-exec-6] com.ws.email.EmailService                : 邮件发送成功
+2020-05-06 04:22:26.595  INFO 5392 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:22:26.600  INFO 5392 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:22:28.958  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[11, {}]}
+2020-05-06 04:22:29.015  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:22:29.460  INFO 5392 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:22:29.466  INFO 5392 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:22:29.662  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:22:29.672  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:22:51.601  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.ws.web.CommentController.post', args=[Comment{id=null, email='3555202908@qq.com', content='感谢！感谢！', avatar='null', createTime=null, blog=Blog{id=11, title='null', content='null', flag='null', views=null, polished=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replayComments=[], parentComment=Comment{id=79, email='null', content='null', avatar='null', createTime=null, blog=null, replayComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@6e3a998b]}
+2020-05-06 04:22:51.674  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : redirect:/comments/11
+2020-05-06 04:22:51.679  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:22:51.688  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:29:27.548  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments', ip='127.0.0.1', classMethod='com.ws.web.CommentController.post', args=[Comment{id=null, email='3555202908@qq.com', content='搞掂，瞓（fen）觉。', avatar='null', createTime=null, blog=Blog{id=11, title='null', content='null', flag='null', views=null, polished=false, recommend=false, createTime=null, updateTime=null, type=null, tags=[], user=null, comments=[], tagIds='null', description='null'}, replayComments=[], parentComment=Comment{id=80, email='null', content='null', avatar='null', createTime=null, blog=null, replayComments=[], parentComment=null, adminComment=false}, adminComment=false}, org.apache.catalina.session.StandardSessionFacade@6e3a998b]}
+2020-05-06 04:29:27.845  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : redirect:/comments/11
+2020-05-06 04:29:27.849  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:29:27.861  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:29:45.909  INFO 5392 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:29:45.914  INFO 5392 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:29:48.562  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[11, {}]}
+2020-05-06 04:29:48.621  INFO 5392 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:29:49.048  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:29:49.057  INFO 5392 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:29:49.190  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:29:49.209  INFO 5392 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:43:11.740  INFO 9676 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 9676 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2020-05-06 04:43:11.742 DEBUG 9676 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2020-05-06 04:43:11.742  INFO 9676 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2020-05-06 04:43:11.780  INFO 9676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-06 04:43:11.780  INFO 9676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-06 04:43:12.393  INFO 9676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-06 04:43:12.462  INFO 9676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 5 repository interfaces.
+2020-05-06 04:43:12.749  INFO 9676 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$31331d19] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 04:43:13.178  INFO 9676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-06 04:43:13.195  INFO 9676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 04:43:13.195  INFO 9676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-06 04:43:13.351  INFO 9676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-06 04:43:13.351  INFO 9676 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1571 ms
+2020-05-06 04:43:13.506  INFO 9676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-06 04:43:13.599  INFO 9676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-06 04:43:13.635  INFO 9676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-06 04:43:13.681  INFO 9676 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-06 04:43:13.682  INFO 9676 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-06 04:43:13.845  INFO 9676 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-06 04:43:13.970  INFO 9676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-06 04:43:14.621  INFO 9676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-06 04:43:14.674  INFO 9676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 04:43:14.952  INFO 9676 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-06 04:43:15.637  INFO 9676 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 04:43:15.698  WARN 9676 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-06 04:43:15.752  INFO 9676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-06 04:43:16.240  INFO 9676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-06 04:43:16.242  INFO 9676 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 5.301 seconds (JVM running for 6.715)
+2020-05-06 04:43:25.588  INFO 9676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 04:43:25.588  INFO 9676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-06 04:43:25.603  INFO 9676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-05-06 04:43:25.636  INFO 9676 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:43:25.712  WARN 9676 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 04:43:25.722  WARN 9676 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 04:43:25.728  INFO 9676 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:43:26.647  INFO 9676 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:43:26.659  INFO 9676 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:43:31.013  INFO 9676 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/11', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[11, {}]}
+2020-05-06 04:43:31.122  INFO 9676 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:43:31.575  INFO 9676 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:43:31.587  INFO 9676 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:43:31.936  INFO 9676 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/11', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[11, {}]}
+2020-05-06 04:43:31.997  INFO 9676 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:48:28.796  INFO 840 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 840 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2020-05-06 04:48:28.798 DEBUG 840 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2020-05-06 04:48:28.798  INFO 840 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2020-05-06 04:48:28.983  INFO 840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-06 04:48:28.984  INFO 840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-06 04:48:29.990  INFO 840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-06 04:48:30.117  INFO 840 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107ms. Found 5 repository interfaces.
+2020-05-06 04:48:30.683  INFO 840 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a6fe85b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 04:48:31.182  INFO 840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-06 04:48:31.199  INFO 840 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 04:48:31.199  INFO 840 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-06 04:48:31.370  INFO 840 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-06 04:48:31.370  INFO 840 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2386 ms
+2020-05-06 04:48:31.580  INFO 840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-06 04:48:31.717  INFO 840 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-06 04:48:31.754  INFO 840 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-06 04:48:31.836  INFO 840 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-06 04:48:31.838  INFO 840 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-06 04:48:31.966  INFO 840 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-06 04:48:32.145  INFO 840 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-06 04:48:33.241  INFO 840 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-06 04:48:33.315  INFO 840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 04:48:33.728  INFO 840 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-06 04:48:34.763  INFO 840 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 04:48:34.821  WARN 840 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-06 04:48:34.897  INFO 840 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-06 04:48:35.483  INFO 840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-06 04:48:35.486  INFO 840 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 7.492 seconds (JVM running for 9.103)
+2020-05-06 04:48:42.933  INFO 840 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 04:48:42.934  INFO 840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-06 04:48:42.947  INFO 840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-05-06 04:48:42.976  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:48:43.045  WARN 840 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 04:48:43.054  WARN 840 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 04:48:43.060  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:48:43.800  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:48:43.809  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:48:49.306  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-05-06 04:48:49.342  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : type
+2020-05-06 04:48:49.755  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:48:49.762  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:48:54.691  INFO 840 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/types/1', ip='127.0.0.1', classMethod='com.ws.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 1, {}]}
+2020-05-06 04:48:54.706  INFO 840 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : type
+2020-05-06 04:48:55.090  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:48:55.100  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:49:28.181  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.ws.web.TagShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-05-06 04:49:28.210  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : tags
+2020-05-06 04:49:28.687  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:49:28.693  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:49:31.060  INFO 840 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/tags/2', ip='127.0.0.1', classMethod='com.ws.web.TagShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 2, {}]}
+2020-05-06 04:49:31.075  INFO 840 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : tags
+2020-05-06 04:49:31.447  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:49:31.456  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:49:34.811  INFO 840 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/tags/10', ip='127.0.0.1', classMethod='com.ws.web.TagShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 10, {}]}
+2020-05-06 04:49:34.827  INFO 840 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : tags
+2020-05-06 04:49:35.253  INFO 840 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:49:35.263  INFO 840 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:49:35.889  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/tags/9', ip='127.0.0.1', classMethod='com.ws.web.TagShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 9, {}]}
+2020-05-06 04:49:35.906  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : tags
+2020-05-06 04:49:36.266  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:49:36.273  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:49:39.596  INFO 840 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/tags/8', ip='127.0.0.1', classMethod='com.ws.web.TagShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 8, {}]}
+2020-05-06 04:49:39.612  INFO 840 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : tags
+2020-05-06 04:49:39.980  INFO 840 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:49:39.986  INFO 840 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:49:53.831  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.ws.web.ArchiveShowController.archive', args=[{}]}
+2020-05-06 04:49:53.861  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : archives
+2020-05-06 04:49:54.280  INFO 840 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:49:54.286  INFO 840 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:50:01.158  INFO 840 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:50:01.179  INFO 840 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:50:01.548  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:50:01.555  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:50:21.954  INFO 840 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:50:21.976  INFO 840 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:50:22.396  INFO 840 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:50:22.403  INFO 840 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:52:39.639  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:52:39.647  INFO 840 --- [http-nio-8080-exec-3] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:52:40.038  INFO 840 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:52:40.047  INFO 840 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:53:08.541  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:53:08.554  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:53:08.975  INFO 840 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:53:08.986  INFO 840 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:53:22.266  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/blog/5', ip='127.0.0.1', classMethod='com.ws.web.indexController.blog', args=[5, {}]}
+2020-05-06 04:53:22.353  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : blog
+2020-05-06 04:53:22.781  INFO 840 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:53:22.786  INFO 840 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:53:22.969  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/comments/5', ip='127.0.0.1', classMethod='com.ws.web.CommentController.comments', args=[5, {}]}
+2020-05-06 04:53:23.003  INFO 840 --- [http-nio-8080-exec-7] com.ws.aspects.LogAspect                 : Result : blog::comment_list
+2020-05-06 04:55:23.528  INFO 840 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:55:23.547  INFO 840 --- [http-nio-8080-exec-8] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:55:23.958  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:55:23.964  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:55:31.270  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.ws.web.ArchiveShowController.archive', args=[{}]}
+2020-05-06 04:55:31.283  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : archives
+2020-05-06 04:55:31.636  INFO 840 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:55:31.641  INFO 840 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 04:55:34.390  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 04:55:34.403  INFO 840 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 04:55:34.775  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 04:55:34.782  INFO 840 --- [http-nio-8080-exec-1] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 05:02:42.399  INFO 9496 --- [restartedMain] com.ws.WblogApplication                  : Starting WblogApplication on SC-201801191636 with PID 9496 (started by Administrator in D:\Idea工作空间\wblog\wblog)
+2020-05-06 05:02:42.403 DEBUG 9496 --- [restartedMain] com.ws.WblogApplication                  : Running with Spring Boot v2.1.7.RELEASE, Spring v5.1.9.RELEASE
+2020-05-06 05:02:42.403  INFO 9496 --- [restartedMain] com.ws.WblogApplication                  : The following profiles are active: dev
+2020-05-06 05:02:42.527  INFO 9496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-06 05:02:42.527  INFO 9496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-06 05:02:43.748  INFO 9496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-05-06 05:02:43.820  INFO 9496 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 5 repository interfaces.
+2020-05-06 05:02:44.260  INFO 9496 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d5a4ee5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-06 05:02:45.058  INFO 9496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-06 05:02:45.110  INFO 9496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-06 05:02:45.110  INFO 9496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-05-06 05:02:45.286  INFO 9496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-06 05:02:45.286  INFO 9496 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2759 ms
+2020-05-06 05:02:45.624  INFO 9496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-06 05:02:46.171  INFO 9496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-06 05:02:46.213  INFO 9496 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-06 05:02:46.500  INFO 9496 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-05-06 05:02:46.502  INFO 9496 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-05-06 05:02:47.081  INFO 9496 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-05-06 05:02:47.931  INFO 9496 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-06 05:02:48.978  INFO 9496 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-06 05:02:49.036  INFO 9496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-06 05:02:49.358  INFO 9496 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-06 05:02:49.998  INFO 9496 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-06 05:02:50.041  WARN 9496 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-06 05:02:50.096  INFO 9496 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-06 05:02:50.594  INFO 9496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-06 05:02:50.596  INFO 9496 --- [restartedMain] com.ws.WblogApplication                  : Started WblogApplication in 9.481 seconds (JVM running for 11.681)
+2020-05-06 05:02:59.591  INFO 9496 --- [http-nio-8080-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-06 05:02:59.591  INFO 9496 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-06 05:02:59.603  INFO 9496 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-05-06 05:02:59.634  INFO 9496 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 05:02:59.712  WARN 9496 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 05:02:59.721  WARN 9496 --- [http-nio-8080-exec-9] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-05-06 05:02:59.728  INFO 9496 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 05:03:00.502  INFO 9496 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 05:03:00.508  INFO 9496 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 05:03:13.954  INFO 9496 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 05:03:13.973  INFO 9496 --- [http-nio-8080-exec-4] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 05:03:14.310  INFO 9496 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 05:03:14.317  INFO 9496 --- [http-nio-8080-exec-5] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 05:04:35.313  INFO 9496 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 05:04:35.326  INFO 9496 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 05:04:35.725  INFO 9496 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 05:04:35.729  INFO 9496 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 05:04:40.627  INFO 9496 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 05:04:40.632  INFO 9496 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 05:05:32.984  INFO 9496 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 05:05:32.993  INFO 9496 --- [http-nio-8080-exec-9] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 05:05:33.414  INFO 9496 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 05:05:33.419  INFO 9496 --- [http-nio-8080-exec-10] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
+2020-05-06 05:07:10.938  INFO 9496 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.ws.web.indexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-05-06 05:07:10.953  INFO 9496 --- [http-nio-8080-exec-2] com.ws.aspects.LogAspect                 : Result : index
+2020-05-06 05:07:11.363  INFO 9496 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Request : aspectPojo{url='http://127.0.0.1:8080/footer/newblog', ip='127.0.0.1', classMethod='com.ws.web.indexController.newBlogs', args=[{}]}
+2020-05-06 05:07:11.369  INFO 9496 --- [http-nio-8080-exec-6] com.ws.aspects.LogAspect                 : Result : _fragments::newblogList
