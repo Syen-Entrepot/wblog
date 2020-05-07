@@ -42,6 +42,31 @@ public class BlogServiceImpl implements BlogService {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
                 List<Predicate> predicates = new ArrayList<>();
+                //predicates.add(cb.equal(root.get("polished").as(boolean.class),true));
+                if(!"".equals(blogQuery.getTitle()) && blogQuery.getTitle() != null){
+                    predicates.add(cb.like(root.<String>get("title"),"%"+blogQuery.getTitle()+"%"));
+                }
+                if(blogQuery.getTypeId() != null) {
+                    predicates.add(cb.equal(root.<Type>get("type").get("id"),blogQuery.getTypeId()));
+                }
+                if(blogQuery.isRecommend()){
+                    predicates.add(cb.equal(root.<Boolean>get("recommend"),blogQuery.isRecommend()));
+                }
+                /**
+                 * list转换成数组
+                 */
+                cq.where(predicates.toArray(new Predicate[predicates.size()]));
+                return null;
+            }
+        },pageable);
+    }
+
+    @Override
+    public Page<Blog> typelistBlog(Pageable pageable, BlogQuery blogQuery) {
+        return blogRepository.findAll(new Specification<Blog>() {
+            @Override
+            public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
+                List<Predicate> predicates = new ArrayList<>();
                 predicates.add(cb.equal(root.get("polished").as(boolean.class),true));
                 if(!"".equals(blogQuery.getTitle()) && blogQuery.getTitle() != null){
                     predicates.add(cb.like(root.<String>get("title"),"%"+blogQuery.getTitle()+"%"));
