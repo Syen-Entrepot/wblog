@@ -42,6 +42,7 @@ public class BlogServiceImpl implements BlogService {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
                 List<Predicate> predicates = new ArrayList<>();
+                predicates.add(cb.equal(root.get("polished").as(boolean.class),true));
                 if(!"".equals(blogQuery.getTitle()) && blogQuery.getTitle() != null){
                     predicates.add(cb.like(root.<String>get("title"),"%"+blogQuery.getTitle()+"%"));
                 }
@@ -93,8 +94,13 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(new Specification<Blog>() {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
-                Join join = root.join("tags");
-                return criteriaBuilder.equal(join.get("id"),tagId);
+                List<Predicate> list = new ArrayList<>();
+                list.add(criteriaBuilder.equal(root.get("polished").as(boolean.class),true));
+                list.add(criteriaBuilder.equal(root.join("tags").get("id").as(Integer.class),tagId));
+                Predicate[] predicates = new Predicate[list.size()];
+                return criteriaBuilder.and(list.toArray(predicates));
+                /*Join join = root.join("tags");
+                return criteriaBuilder.equal(join.get("id"),tagId);*/
             }
         },pageable);
     }
