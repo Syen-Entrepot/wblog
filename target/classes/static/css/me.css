@@ -3,6 +3,12 @@ body{
     background: url("../images/white-waves.png");
 }
 
+.border-radius-mini{
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    margin-left: 4px !important;
+}
+
 .m-font{
     text-align: center !important;
 }

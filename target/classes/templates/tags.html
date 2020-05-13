@@ -50,8 +50,8 @@
         <!--分类-->
         <div class="ui attached segment m-padded-tb-large">
             <div class="ui labeled button m-margin-tb-tiny" th:each="tag : ${tags}">
-                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic button" th:classappend="${tag.id==activeTagId} ? 'violet'" th:text="${tag.name}">思考与感悟</a>
-                <div class="ui basic left pointing label" th:classappend="${tag.id==activeTagId} ? 'violet'" th:text="${#arrays.length(tag.blogs)}">23</div>
+                <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" class="ui basic button border-radius-mini" th:classappend="${tag.id==activeTagId} ? 'violet'" th:text="${tag.name}">思考与感悟</a>
+                <!--<div class="ui basic left pointing label" th:classappend="${tag.id==activeTagId} ? 'violet'" th:text="${#arrays.length(tag.blogs)}">23</div>-->
             </div>
             <!--
                          <div class="ui labeled button m-margin-tb-tiny">

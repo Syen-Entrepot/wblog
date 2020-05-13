@@ -40,7 +40,6 @@ public class TypeShowController {
         model.addAttribute("types",types);
         model.addAttribute("page",blogService.typelistBlog(pageable,blogQuery));
         model.addAttribute("activeTypeId",id);
-
         return "type";
     }
 }
